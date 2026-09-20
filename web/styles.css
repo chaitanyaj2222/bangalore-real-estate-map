@@ -327,3 +327,290 @@ h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: -.01em; }
   .detail { width: 100%; top: 0; }
   .map-legend { bottom: 12px; }
 }
+
+/* ---------- mode switch + locate ---------- */
+
+.mode-switch {
+  display: flex;
+  flex: none;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.mode-btn {
+  font: inherit; font-size: 13px; font-weight: 500;
+  padding: 5px 16px;
+  color: var(--ink-2);
+  background: transparent;
+  border: 0; border-radius: 6px;
+  cursor: pointer;
+  transition: background .14s, color .14s;
+}
+.mode-btn:hover { color: var(--ink); }
+.mode-btn[aria-pressed="true"] {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 1px 2px rgba(16,24,40,.12);
+}
+
+.locate-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  flex: none;
+  height: 34px; padding: 0 12px;
+  font: inherit; font-size: 12.5px; font-weight: 500;
+  color: var(--ink-2);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.locate-btn:hover:not(:disabled) { border-color: var(--ink-3); color: var(--ink); }
+.locate-btn:disabled { opacity: .55; cursor: progress; }
+.locate-btn svg {
+  width: 15px; height: 15px;
+  fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round;
+}
+
+.loc-status {
+  margin: 0;
+  padding: 0 18px;
+  font-size: 12px;
+  line-height: 0;
+  overflow: hidden;
+  color: var(--ink-2);
+  transition: line-height .15s, padding .15s;
+}
+.loc-status:not(:empty) { line-height: 2.1; border-bottom: 1px solid var(--border); background: var(--surface); }
+.loc-status.ok { color: #15803d; }
+.loc-status.err { color: #b91c1c; }
+
+/* The status strip eats vertical space only when it has something to say. */
+.loc-status:not(:empty) ~ .layout { height: calc(100% - var(--topbar-h) - 30px); }
+
+/* ---------- user location marker ---------- */
+
+.me-dot {
+  width: 14px; height: 14px;
+  margin: 2px;
+  border-radius: 50%;
+  background: #2563eb;
+  border: 2.5px solid #fff;
+  box-shadow: 0 0 0 1px rgba(37,99,235,.5), 0 1px 5px rgba(0,0,0,.35);
+}
+
+.tag.dist { background: #eef2ff; color: #3730a3; border-color: #e0e7ff; }
+
+.dist-line {
+  margin: -8px 0 14px;
+  font-size: 12.5px;
+  color: #3730a3;
+  background: #eef2ff;
+  border: 1px solid #e0e7ff;
+  border-radius: 7px;
+  padding: 6px 9px;
+}
+
+/* ---------- roads ---------- */
+
+.road-tip {
+  max-width: 250px;
+  font-size: 11.5px;
+  line-height: 1.45;
+  white-space: normal;
+}
+
+.legend-title {
+  font-size: 10px; text-transform: uppercase; letter-spacing: .08em;
+  color: var(--ink-3); font-weight: 600;
+  margin: 9px 0 5px;
+}
+.legend-title:first-child { margin-top: 0; }
+
+.map-legend .muted { color: var(--ink-3); }
+
+.line-key {
+  width: 18px; height: 0;
+  border-top: 3px solid var(--rc);
+  border-radius: 2px;
+  flex: none;
+}
+.line-key.dashed { border-top-style: dashed; }
+
+.pill-key {
+  font-size: 10px; font-weight: 700;
+  padding: 2px 6px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+}
+
+.legend-toggles {
+  display: flex; flex-direction: column; gap: 4px;
+  margin-top: 8px; padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+.road-toggle {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11.5px; color: var(--ink-2); cursor: pointer;
+}
+.road-toggle input { accent-color: var(--accent); margin: 0; }
+
+/* ---------- rent: price-pill markers ---------- */
+
+.rent-pin {
+  display: flex; align-items: center; justify-content: center;
+  height: 26px; padding: 0 9px;
+  font-size: 12px; font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  box-shadow: 0 1px 4px rgba(16,24,40,.28);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform .12s ease, background .12s, color .12s;
+}
+.rent-pin:hover, .rent-pin.is-hot { transform: scale(1.1); border-color: var(--ink-3); }
+.rent-pin.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  transform: scale(1.12);
+}
+
+/* ---------- rent: listing cards ---------- */
+
+.results-rent { padding: 8px; display: grid; gap: 10px; }
+
+.rcard {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: 11px;
+  padding: 8px;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background .12s, border-color .12s;
+}
+.rcard:hover, .rcard.is-hot { background: var(--bg); }
+.rcard[aria-current="true"] { background: var(--bg); border-color: var(--border-strong); }
+
+.rcard-media {
+  width: 104px; height: 86px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg);
+  flex: none;
+}
+.rcard-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.img-fallback { width: 100%; height: 100%; display: block; }
+
+.rcard-body { min-width: 0; }
+.rcard-top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.rcard h3 {
+  font-size: 13px; line-height: 1.3;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.rcard .loc { font-size: 11.5px; color: var(--ink-2); margin: 3px 0 4px; }
+.rcard .rent { margin: 0 0 6px; font-size: 12.5px; color: var(--ink-2); }
+.rcard .rent b { font-size: 13.5px; color: var(--ink); font-variant-numeric: tabular-nums; }
+
+.rating {
+  font-size: 11.5px; font-weight: 600; color: var(--ink);
+  white-space: nowrap; flex: none;
+}
+.rating.inline { margin-left: 8px; font-weight: 500; }
+.rating .muted { color: var(--ink-3); font-weight: 400; }
+
+/* ---------- rent: detail gallery ---------- */
+
+.gallery { margin: -4px 0 16px; }
+
+.gal-frame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg);
+}
+.gal-stage, .gal-img { width: 100%; height: 100%; }
+.gal-img { object-fit: cover; display: block; }
+
+.gal-nav {
+  position: absolute; top: 50%;
+  transform: translateY(-50%);
+  width: 30px; height: 30px;
+  font-size: 19px; line-height: 1;
+  color: var(--ink);
+  background: rgba(255,255,255,.92);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.gal-nav:hover { background: #fff; }
+.gal-nav.prev { left: 8px; }
+.gal-nav.next { right: 8px; }
+
+.gal-count {
+  position: absolute; right: 8px; bottom: 8px;
+  padding: 2px 8px;
+  font-size: 11px; font-variant-numeric: tabular-nums;
+  color: #fff;
+  background: rgba(0,0,0,.55);
+  border-radius: 999px;
+}
+
+.gal-thumbs { display: flex; gap: 6px; margin-top: 7px; }
+.gal-thumb {
+  width: 54px; height: 42px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg);
+  cursor: pointer;
+}
+.gal-thumb[aria-current="true"] { border-color: var(--accent); }
+.gal-thumb-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ---------- rent: detail body ---------- */
+
+.rent-big { margin: 0 0 16px; font-size: 14px; color: var(--ink-2); }
+.rent-big b { font-size: 21px; color: var(--ink); font-variant-numeric: tabular-nums; }
+
+.detail .desc { font-size: 13px; color: var(--ink-2); margin: 0; line-height: 1.6; }
+.amenities { display: flex; flex-wrap: wrap; gap: 5px; }
+
+.note.warn {
+  color: #92400e;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-top-color: #fde68a;
+  border-radius: 8px;
+  padding: 10px 11px;
+}
+
+/* ---------- responsive additions ---------- */
+
+@media (max-width: 1240px) {
+  .brand-sub { display: none; }
+}
+
+@media (max-width: 1100px) {
+  .locate-btn span, .locate-btn { font-size: 0; gap: 0; padding: 0 10px; }
+  .locate-btn svg { font-size: 12.5px; }
+}
+
+@media (max-width: 720px) {
+  .mode-switch { order: 2; }
+  .locate-btn { order: 4; font-size: 12.5px; gap: 6px; padding: 0 12px; }
+  .search-wrap { order: 5; }
+  .mobile-toggle { order: 3; }
+  .rcard { grid-template-columns: 120px 1fr; }
+  .detail { width: 100%; top: 0; }
+}

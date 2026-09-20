@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 <title>Bangalore Real Estate Map</title>
-<meta name="description" content="An interactive map of upcoming residential projects in Bengaluru by Godrej, Prestige and Assetz.">
+<meta name="description" content="Interactive map of upcoming residential projects and rentals in Bengaluru, with ring roads and distance from your location.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏙️</text></svg>">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="styles.css">
@@ -15,19 +15,31 @@
     <span class="brand-mark" aria-hidden="true"></span>
     <div>
       <h1>Bangalore Real Estate Map</h1>
-      <p class="brand-sub">Upcoming residential projects across the city</p>
+      <p class="brand-sub">Projects to buy, homes to rent, and the roads between them</p>
     </div>
+  </div>
+
+  <div class="mode-switch" role="group" aria-label="Buy or rent">
+    <button type="button" class="mode-btn" data-mode="buy" aria-pressed="true">Buy</button>
+    <button type="button" class="mode-btn" data-mode="rent" aria-pressed="false">Rent</button>
   </div>
 
   <div class="search-wrap">
     <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-    <input id="search" type="search" placeholder="Search project, locality or corridor…" autocomplete="off" aria-label="Search projects">
+    <input id="search" type="search" placeholder="Search project, locality or corridor…" autocomplete="off" aria-label="Search">
   </div>
+
+  <button class="locate-btn" id="locateBtn" type="button" title="Show my location and distances">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><circle cx="12" cy="12" r="8"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3"/></svg>
+    Locate me
+  </button>
 
   <div class="topbar-stats" id="topbarStats"></div>
 
   <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Toggle list and map">Map</button>
 </header>
+
+<p class="loc-status" id="locStatus" role="status" aria-live="polite"></p>
 
 <main class="layout">
   <aside class="sidebar" id="sidebar">
@@ -43,13 +55,7 @@
       <span id="resultCount">—</span>
       <label class="sort">
         Sort
-        <select id="sort" aria-label="Sort results">
-          <option value="name">Name</option>
-          <option value="newest">Newest launch</option>
-          <option value="price_asc">Price: low to high</option>
-          <option value="price_desc">Price: high to low</option>
-          <option value="size">Land area</option>
-        </select>
+        <select id="sort" aria-label="Sort results"></select>
       </label>
     </div>
 
@@ -69,6 +75,6 @@
 </aside>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<script src="app.js"></script>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>

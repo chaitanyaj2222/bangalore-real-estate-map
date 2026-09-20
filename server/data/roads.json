@@ -1,0 +1,681 @@
+{
+  "meta": {
+    "lastUpdated": "2026-09-20",
+    "dataConfidence": "indicative",
+    "disclaimer": "Road alignments are hand-traced approximations through known junctions, not survey or cadastral data. The PRR in particular is a proposed road whose alignment has changed repeatedly."
+  },
+  "roads": [
+    {
+      "id": "orr",
+      "shortName": "ORR",
+      "name": "Outer Ring Road",
+      "category": "ring",
+      "status": "operational",
+      "color": "#7c3aed",
+      "dashed": false,
+      "weight": 4,
+      "note": "The ~62 km inner ring. Carries most of the IT corridor traffic between Hebbal, KR Puram, Marathahalli, Silk Board and Peenya.",
+      "path": [
+        [
+          13.0358,
+          77.5913
+        ],
+        [
+          13.0435,
+          77.618
+        ],
+        [
+          13.043,
+          77.639
+        ],
+        [
+          13.023,
+          77.653
+        ],
+        [
+          13.005,
+          77.674
+        ],
+        [
+          12.991,
+          77.695
+        ],
+        [
+          12.956,
+          77.701
+        ],
+        [
+          12.925,
+          77.677
+        ],
+        [
+          12.923,
+          77.642
+        ],
+        [
+          12.9175,
+          77.623
+        ],
+        [
+          12.918,
+          77.599
+        ],
+        [
+          12.923,
+          77.565
+        ],
+        [
+          12.943,
+          77.523
+        ],
+        [
+          12.979,
+          77.516
+        ],
+        [
+          13.028,
+          77.516
+        ],
+        [
+          13.042,
+          77.533
+        ],
+        [
+          13.0358,
+          77.5913
+        ]
+      ]
+    },
+    {
+      "id": "nice",
+      "shortName": "NICE Road",
+      "name": "NICE Peripheral Road",
+      "category": "ring",
+      "status": "operational",
+      "color": "#0891b2",
+      "dashed": false,
+      "weight": 4,
+      "note": "Tolled expressway arcing across the south-west, linking Hosur Road to Tumkur Road without entering the city.",
+      "path": [
+        [
+          12.849,
+          77.664
+        ],
+        [
+          12.862,
+          77.62
+        ],
+        [
+          12.87,
+          77.587
+        ],
+        [
+          12.889,
+          77.533
+        ],
+        [
+          12.905,
+          77.508
+        ],
+        [
+          12.925,
+          77.488
+        ],
+        [
+          12.965,
+          77.472
+        ],
+        [
+          13.008,
+          77.465
+        ]
+      ]
+    },
+    {
+      "id": "prr",
+      "shortName": "PRR",
+      "name": "Peripheral Ring Road (proposed)",
+      "category": "ring",
+      "status": "proposed",
+      "color": "#db2777",
+      "dashed": true,
+      "weight": 4,
+      "note": "Proposed ~73 km eastern ring from Tumkur Road to Hosur Road. Alignment has shifted repeatedly and land acquisition is incomplete - treat this trace as indicative only.",
+      "path": [
+        [
+          13.074,
+          77.457
+        ],
+        [
+          13.115,
+          77.5
+        ],
+        [
+          13.145,
+          77.555
+        ],
+        [
+          13.135,
+          77.598
+        ],
+        [
+          13.115,
+          77.655
+        ],
+        [
+          13.085,
+          77.7
+        ],
+        [
+          13.045,
+          77.725
+        ],
+        [
+          12.96,
+          77.765
+        ],
+        [
+          12.895,
+          77.755
+        ],
+        [
+          12.85,
+          77.74
+        ],
+        [
+          12.82,
+          77.72
+        ]
+      ]
+    },
+    {
+      "id": "strr",
+      "shortName": "STRR",
+      "name": "Satellite Town Ring Road (NH-948A)",
+      "category": "ring",
+      "status": "partly open",
+      "color": "#4d7c0f",
+      "dashed": true,
+      "weight": 4,
+      "note": "Outermost ~280 km ring through the satellite towns - Dobbaspet, Doddaballapur, Devanahalli, Hoskote, Sarjapur, Attibele, Anekal, Kanakapura, Ramanagara and Magadi. Sections are still under construction.",
+      "path": [
+        [
+          13.235,
+          77.355
+        ],
+        [
+          13.293,
+          77.54
+        ],
+        [
+          13.248,
+          77.715
+        ],
+        [
+          13.15,
+          77.79
+        ],
+        [
+          13.072,
+          77.8
+        ],
+        [
+          12.96,
+          77.805
+        ],
+        [
+          12.865,
+          77.79
+        ],
+        [
+          12.785,
+          77.765
+        ],
+        [
+          12.71,
+          77.695
+        ],
+        [
+          12.63,
+          77.56
+        ],
+        [
+          12.546,
+          77.42
+        ],
+        [
+          12.63,
+          77.33
+        ],
+        [
+          12.715,
+          77.28
+        ],
+        [
+          12.86,
+          77.23
+        ],
+        [
+          12.957,
+          77.223
+        ],
+        [
+          13.1,
+          77.29
+        ],
+        [
+          13.235,
+          77.355
+        ]
+      ]
+    },
+    {
+      "id": "nh44-s",
+      "shortName": "Hosur Road",
+      "name": "Hosur Road / NH-44 (south)",
+      "category": "radial",
+      "status": "operational",
+      "color": "#64748b",
+      "dashed": false,
+      "weight": 2.5,
+      "note": "Electronic City and the Tamil Nadu corridor.",
+      "path": [
+        [
+          12.9175,
+          77.623
+        ],
+        [
+          12.9,
+          77.625
+        ],
+        [
+          12.87,
+          77.645
+        ],
+        [
+          12.845,
+          77.66
+        ],
+        [
+          12.8,
+          77.7
+        ],
+        [
+          12.785,
+          77.765
+        ]
+      ]
+    },
+    {
+      "id": "nh44-n",
+      "shortName": "Bellary Road",
+      "name": "Bellary Road / NH-44 (north)",
+      "category": "radial",
+      "status": "operational",
+      "color": "#64748b",
+      "dashed": false,
+      "weight": 2.5,
+      "note": "Hebbal to Kempegowda International Airport.",
+      "path": [
+        [
+          13.0358,
+          77.5913
+        ],
+        [
+          13.07,
+          77.593
+        ],
+        [
+          13.1,
+          77.596
+        ],
+        [
+          13.135,
+          77.608
+        ],
+        [
+          13.17,
+          77.65
+        ],
+        [
+          13.199,
+          77.706
+        ]
+      ]
+    },
+    {
+      "id": "omr",
+      "shortName": "Old Madras Road",
+      "name": "Old Madras Road / NH-75",
+      "category": "radial",
+      "status": "operational",
+      "color": "#64748b",
+      "dashed": false,
+      "weight": 2.5,
+      "note": "Indiranagar through KR Puram and Budigere to Hoskote.",
+      "path": [
+        [
+          12.978,
+          77.64
+        ],
+        [
+          12.99,
+          77.67
+        ],
+        [
+          13.005,
+          77.695
+        ],
+        [
+          13.02,
+          77.72
+        ],
+        [
+          13.034,
+          77.747
+        ],
+        [
+          13.07,
+          77.798
+        ]
+      ]
+    },
+    {
+      "id": "sarjapur",
+      "shortName": "Sarjapur Road",
+      "name": "Sarjapur Road",
+      "category": "radial",
+      "status": "operational",
+      "color": "#64748b",
+      "dashed": false,
+      "weight": 2.5,
+      "note": "Agara through Kasavanahalli and Kodathi to Sarjapur town.",
+      "path": [
+        [
+          12.923,
+          77.642
+        ],
+        [
+          12.91,
+          77.66
+        ],
+        [
+          12.902,
+          77.679
+        ],
+        [
+          12.894,
+          77.695
+        ],
+        [
+          12.887,
+          77.709
+        ],
+        [
+          12.87,
+          77.75
+        ],
+        [
+          12.862,
+          77.785
+        ]
+      ]
+    },
+    {
+      "id": "whitefield",
+      "shortName": "Whitefield Road",
+      "name": "Whitefield Main Road",
+      "category": "radial",
+      "status": "operational",
+      "color": "#64748b",
+      "dashed": false,
+      "weight": 2.5,
+      "note": "KR Puram through Hoodi and ITPL to Kadugodi.",
+      "path": [
+        [
+          13.005,
+          77.695
+        ],
+        [
+          12.993,
+          77.716
+        ],
+        [
+          12.986,
+          77.736
+        ],
+        [
+          12.99,
+          77.748
+        ],
+        [
+          12.996,
+          77.756
+        ]
+      ]
+    },
+    {
+      "id": "bannerghatta",
+      "shortName": "Bannerghatta Road",
+      "name": "Bannerghatta Road",
+      "category": "radial",
+      "status": "operational",
+      "color": "#64748b",
+      "dashed": false,
+      "weight": 2.5,
+      "note": "Jayadeva junction south past the hospital cluster.",
+      "path": [
+        [
+          12.918,
+          77.599
+        ],
+        [
+          12.9,
+          77.599
+        ],
+        [
+          12.888,
+          77.598
+        ],
+        [
+          12.87,
+          77.59
+        ],
+        [
+          12.8,
+          77.577
+        ]
+      ]
+    },
+    {
+      "id": "kanakapura",
+      "shortName": "Kanakapura Road",
+      "name": "Kanakapura Road / SH-3",
+      "category": "radial",
+      "status": "operational",
+      "color": "#64748b",
+      "dashed": false,
+      "weight": 2.5,
+      "note": "Banashankari south through Talaghattapura.",
+      "path": [
+        [
+          12.923,
+          77.565
+        ],
+        [
+          12.895,
+          77.548
+        ],
+        [
+          12.866,
+          77.533
+        ],
+        [
+          12.82,
+          77.515
+        ]
+      ]
+    },
+    {
+      "id": "mysore",
+      "shortName": "Mysore Road",
+      "name": "Mysore Road / NH-275",
+      "category": "radial",
+      "status": "operational",
+      "color": "#64748b",
+      "dashed": false,
+      "weight": 2.5,
+      "note": "Nayandahalli west through Kengeri and Bidadi.",
+      "path": [
+        [
+          12.943,
+          77.523
+        ],
+        [
+          12.93,
+          77.5
+        ],
+        [
+          12.916,
+          77.485
+        ],
+        [
+          12.84,
+          77.42
+        ],
+        [
+          12.8,
+          77.385
+        ]
+      ]
+    },
+    {
+      "id": "tumkur",
+      "shortName": "Tumkur Road",
+      "name": "Tumkur Road / NH-48",
+      "category": "radial",
+      "status": "operational",
+      "color": "#64748b",
+      "dashed": false,
+      "weight": 2.5,
+      "note": "Yeshwanthpur through Peenya to Nelamangala.",
+      "path": [
+        [
+          13.023,
+          77.55
+        ],
+        [
+          13.029,
+          77.516
+        ],
+        [
+          13.045,
+          77.48
+        ],
+        [
+          13.074,
+          77.457
+        ],
+        [
+          13.099,
+          77.394
+        ]
+      ]
+    },
+    {
+      "id": "hennur",
+      "shortName": "Hennur Road",
+      "name": "Hennur - Bagalur Road",
+      "category": "radial",
+      "status": "operational",
+      "color": "#64748b",
+      "dashed": false,
+      "weight": 2.5,
+      "note": "Hennur through Kannur to the Bagalur IT belt.",
+      "path": [
+        [
+          13.043,
+          77.639
+        ],
+        [
+          13.064,
+          77.644
+        ],
+        [
+          13.08,
+          77.648
+        ],
+        [
+          13.095,
+          77.656
+        ],
+        [
+          13.13,
+          77.66
+        ]
+      ]
+    },
+    {
+      "id": "oldairport",
+      "shortName": "Old Airport Road",
+      "name": "Old Airport Road / Varthur Road",
+      "category": "radial",
+      "status": "operational",
+      "color": "#64748b",
+      "dashed": false,
+      "weight": 2.5,
+      "note": "Domlur through Marathahalli to Varthur.",
+      "path": [
+        [
+          12.962,
+          77.638
+        ],
+        [
+          12.96,
+          77.665
+        ],
+        [
+          12.956,
+          77.701
+        ],
+        [
+          12.943,
+          77.722
+        ],
+        [
+          12.94,
+          77.747
+        ]
+      ]
+    },
+    {
+      "id": "magadi",
+      "shortName": "Magadi Road",
+      "name": "Magadi Road / SH-85",
+      "category": "radial",
+      "status": "operational",
+      "color": "#64748b",
+      "dashed": false,
+      "weight": 2.5,
+      "note": "Vijayanagar west towards Magadi.",
+      "path": [
+        [
+          12.972,
+          77.538
+        ],
+        [
+          12.98,
+          77.49
+        ],
+        [
+          12.97,
+          77.4
+        ],
+        [
+          12.957,
+          77.223
+        ]
+      ]
+    }
+  ]
+}
