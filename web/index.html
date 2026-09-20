@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<title>Bangalore Real Estate Map</title>
+<meta name="description" content="An interactive map of upcoming residential projects in Bengaluru by Godrej, Prestige and Assetz.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏙️</text></svg>">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <div>
+      <h1>Bangalore Real Estate Map</h1>
+      <p class="brand-sub">Upcoming residential projects across the city</p>
+    </div>
+  </div>
+
+  <div class="search-wrap">
+    <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="search" type="search" placeholder="Search project, locality or corridor…" autocomplete="off" aria-label="Search projects">
+  </div>
+
+  <div class="topbar-stats" id="topbarStats"></div>
+
+  <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Toggle list and map">Map</button>
+</header>
+
+<main class="layout">
+  <aside class="sidebar" id="sidebar">
+    <section class="filters" aria-label="Filters">
+      <div class="filters-head">
+        <h2>Filters</h2>
+        <button type="button" id="resetFilters" class="link-btn">Reset</button>
+      </div>
+      <div id="filterGroups"></div>
+    </section>
+
+    <div class="results-head">
+      <span id="resultCount">—</span>
+      <label class="sort">
+        Sort
+        <select id="sort" aria-label="Sort results">
+          <option value="name">Name</option>
+          <option value="newest">Newest launch</option>
+          <option value="price_asc">Price: low to high</option>
+          <option value="price_desc">Price: high to low</option>
+          <option value="size">Land area</option>
+        </select>
+      </label>
+    </div>
+
+    <ul class="results" id="results"></ul>
+  </aside>
+
+  <div class="map-wrap">
+    <div id="map"></div>
+    <div class="map-legend" id="legend"></div>
+    <p class="disclaimer" id="disclaimer"></p>
+  </div>
+</main>
+
+<aside class="detail" id="detail" hidden aria-live="polite">
+  <button class="detail-close" id="detailClose" type="button" aria-label="Close details">&times;</button>
+  <div id="detailBody"></div>
+</aside>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

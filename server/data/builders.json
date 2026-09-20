@@ -1,0 +1,28 @@
+{
+  "builders": [
+    {
+      "id": "godrej",
+      "name": "Godrej Properties",
+      "shortName": "Godrej",
+      "color": "#2f8f79",
+      "website": "https://www.godrejproperties.com",
+      "about": "Listed developer, part of the Godrej Group. Large Bengaluru pipeline across the eastern and northern corridors, mostly JD/JV land-light launches."
+    },
+    {
+      "id": "prestige",
+      "name": "Prestige Group",
+      "shortName": "Prestige",
+      "color": "#2563eb",
+      "website": "https://www.prestigeconstructions.com",
+      "about": "Bengaluru-headquartered developer with the largest residential pipeline in the city, spanning apartments, plotted development and villas."
+    },
+    {
+      "id": "assetz",
+      "name": "Assetz Property Group",
+      "shortName": "Assetz",
+      "color": "#d97706",
+      "website": "https://www.assetzproperty.com",
+      "about": "Singapore-origin developer focused on Bengaluru, known for design-led mid-to-premium apartments in the east and north."
+    }
+  ]
+}

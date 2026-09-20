@@ -1,0 +1,16 @@
+{
+  "name": "bangalore-realestate-map",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An interactive map of upcoming residential projects in Bangalore.",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "validate": "node server/lib/validate.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

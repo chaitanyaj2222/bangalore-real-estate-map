@@ -1,0 +1,1068 @@
+{
+  "meta": {
+    "city": "Bengaluru",
+    "lastUpdated": "2026-09-20",
+    "dataConfidence": "indicative",
+    "disclaimer": "Compiled from publicly announced launches. Coordinates are locality-level approximations, and price/size bands are indicative rather than quoted. Verify RERA registration, pricing and possession with the developer before acting on anything here."
+  },
+  "projects": [
+    {
+      "id": "assetz-63-degree-east",
+      "name": "Assetz 63 Degree East",
+      "builderId": "assetz",
+      "locality": "Kasavanahalli, Off Sarjapur Road",
+      "corridor": "Sarjapur Road",
+      "zone": "South East",
+      "lat": 12.9022,
+      "lng": 77.6779,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 1.5,
+      "priceMaxCr": 3.4,
+      "sizeMinSqft": 1250,
+      "sizeMaxSqft": 2500,
+      "landAcres": 12,
+      "totalUnits": 900,
+      "launchYear": 2020,
+      "possession": "2026",
+      "highlights": [
+        "Design-led towers off Sarjapur Road",
+        "Close to HSR Layout and Bellandur"
+      ]
+    },
+    {
+      "id": "assetz-bloom-and-dell",
+      "name": "Assetz Bloom & Dell",
+      "builderId": "assetz",
+      "locality": "Hennur Road",
+      "corridor": "Hennur / Bagalur",
+      "zone": "North East",
+      "lat": 13.0684,
+      "lng": 77.6389,
+      "propertyType": "Apartment",
+      "status": "New launch",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.15,
+      "priceMaxCr": 2.4,
+      "sizeMinSqft": 1050,
+      "sizeMaxSqft": 1850,
+      "landAcres": 6,
+      "totalUnits": 450,
+      "launchYear": 2024,
+      "possession": "2029",
+      "highlights": [
+        "Mid-premium format on Hennur Road",
+        "Airport and Manyata dual access"
+      ]
+    },
+    {
+      "id": "assetz-canvas-and-cove",
+      "name": "Assetz Canvas & Cove",
+      "builderId": "assetz",
+      "locality": "Hennur Road",
+      "corridor": "Hennur / Bagalur",
+      "zone": "North East",
+      "lat": 13.0799,
+      "lng": 77.6461,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.1,
+      "priceMaxCr": 2.5,
+      "sizeMinSqft": 1050,
+      "sizeMaxSqft": 1900,
+      "landAcres": 11,
+      "totalUnits": 800,
+      "launchYear": 2021,
+      "possession": "2026",
+      "highlights": [
+        "Hennur Road corridor toward the airport",
+        "Manyata Tech Park catchment"
+      ]
+    },
+    {
+      "id": "assetz-earth-and-essence",
+      "name": "Assetz Earth & Essence",
+      "builderId": "assetz",
+      "locality": "Jakkur / Yelahanka",
+      "corridor": "North Bengaluru",
+      "zone": "North",
+      "lat": 13.0873,
+      "lng": 77.6021,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.1,
+      "priceMaxCr": 2.4,
+      "sizeMinSqft": 1050,
+      "sizeMaxSqft": 1850,
+      "landAcres": 8,
+      "totalUnits": 550,
+      "launchYear": 2021,
+      "possession": "2026",
+      "highlights": [
+        "Low-rise density with landscaped courts",
+        "Yelahanka social infrastructure"
+      ]
+    },
+    {
+      "id": "assetz-leaves-and-lives",
+      "name": "Assetz Leaves & Lives",
+      "builderId": "assetz",
+      "locality": "Hennur / Bagalur Road",
+      "corridor": "Hennur / Bagalur",
+      "zone": "North East",
+      "lat": 13.0921,
+      "lng": 77.6588,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1,
+      "priceMaxCr": 2.3,
+      "sizeMinSqft": 1000,
+      "sizeMaxSqft": 1800,
+      "landAcres": 7,
+      "totalUnits": 500,
+      "launchYear": 2022,
+      "possession": "2027",
+      "highlights": [
+        "Green-buffer masterplan",
+        "Hennur to Bagalur growth belt"
+      ]
+    },
+    {
+      "id": "assetz-marq-2",
+      "name": "Assetz Marq 2.0",
+      "builderId": "assetz",
+      "locality": "Channasandra, Whitefield",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 12.9958,
+      "lng": 77.7301,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.85,
+      "priceMaxCr": 2.1,
+      "sizeMinSqft": 700,
+      "sizeMaxSqft": 1750,
+      "landAcres": 18,
+      "totalUnits": 1300,
+      "launchYear": 2021,
+      "possession": "2027",
+      "highlights": [
+        "Second phase of the Assetz Marq township",
+        "Whitefield and Hoodi employment catchment"
+      ]
+    },
+    {
+      "id": "assetz-sora-and-saki",
+      "name": "Assetz Sora & Saki",
+      "builderId": "assetz",
+      "locality": "Chikkajala, Bellary Road",
+      "corridor": "Airport / NH-44",
+      "zone": "North",
+      "lat": 13.1338,
+      "lng": 77.6079,
+      "propertyType": "Apartment",
+      "status": "New launch",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.8,
+      "priceMaxCr": 1.9,
+      "sizeMinSqft": 680,
+      "sizeMaxSqft": 1650,
+      "landAcres": 8,
+      "totalUnits": 700,
+      "launchYear": 2023,
+      "possession": "2028",
+      "highlights": [
+        "Japanese-influenced design language",
+        "Direct Bellary Road and airport access"
+      ]
+    },
+    {
+      "id": "assetz-soul-and-soil",
+      "name": "Assetz Soul & Soil",
+      "builderId": "assetz",
+      "locality": "Jakkur",
+      "corridor": "North Bengaluru",
+      "zone": "North",
+      "lat": 13.0718,
+      "lng": 77.6142,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.2,
+      "priceMaxCr": 2.6,
+      "sizeMinSqft": 1100,
+      "sizeMaxSqft": 1950,
+      "landAcres": 9,
+      "totalUnits": 600,
+      "launchYear": 2022,
+      "possession": "2027",
+      "highlights": [
+        "Near Jakkur lake and aerodrome",
+        "Hebbal and airport road access"
+      ]
+    },
+    {
+      "id": "assetz-sun-and-sanctum",
+      "name": "Assetz Sun & Sanctum",
+      "builderId": "assetz",
+      "locality": "Kodathi, Sarjapur Road",
+      "corridor": "Sarjapur Road",
+      "zone": "South East",
+      "lat": 12.8869,
+      "lng": 77.7089,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 1.3,
+      "priceMaxCr": 3,
+      "sizeMinSqft": 1150,
+      "sizeMaxSqft": 2300,
+      "landAcres": 10,
+      "totalUnits": 700,
+      "launchYear": 2022,
+      "possession": "2027",
+      "highlights": [
+        "Courtyard-led design",
+        "Wipro Sarjapur and RGA tech park catchment"
+      ]
+    },
+    {
+      "id": "godrej-air",
+      "name": "Godrej Air",
+      "builderId": "godrej",
+      "locality": "Hoodi",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 12.9927,
+      "lng": 77.7163,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 1.9,
+      "priceMaxCr": 3.8,
+      "sizeMinSqft": 1550,
+      "sizeMaxSqft": 2600,
+      "landAcres": 10,
+      "totalUnits": 600,
+      "launchYear": 2021,
+      "possession": "2027",
+      "highlights": [
+        "Air-quality led amenity positioning",
+        "Hoodi to ITPL employment catchment"
+      ]
+    },
+    {
+      "id": "godrej-ananda",
+      "name": "Godrej Ananda",
+      "builderId": "godrej",
+      "locality": "Bagalur Cross",
+      "corridor": "Airport / Bagalur",
+      "zone": "North",
+      "lat": 13.1312,
+      "lng": 77.6601,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.6,
+      "priceMaxCr": 1.5,
+      "sizeMinSqft": 620,
+      "sizeMaxSqft": 1500,
+      "landAcres": 20,
+      "totalUnits": 1500,
+      "launchYear": 2020,
+      "possession": "2027",
+      "highlights": [
+        "Phased township format",
+        "Airport corridor off Bellary Road"
+      ]
+    },
+    {
+      "id": "godrej-aqua",
+      "name": "Godrej Aqua",
+      "builderId": "godrej",
+      "locality": "Hosahalli, Bagalur Main Road",
+      "corridor": "Airport / Bagalur",
+      "zone": "North",
+      "lat": 13.1024,
+      "lng": 77.6427,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.65,
+      "priceMaxCr": 1.6,
+      "sizeMinSqft": 640,
+      "sizeMaxSqft": 1550,
+      "landAcres": 9,
+      "totalUnits": 750,
+      "launchYear": 2020,
+      "possession": "2026",
+      "highlights": [
+        "Water-conservation themed masterplan",
+        "North Bengaluru airport corridor"
+      ]
+    },
+    {
+      "id": "godrej-athena",
+      "name": "Godrej Athena",
+      "builderId": "godrej",
+      "locality": "Hosa Road, Electronic City",
+      "corridor": "Hosur Road / Electronic City",
+      "zone": "South",
+      "lat": 12.8762,
+      "lng": 77.6549,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.1,
+      "priceMaxCr": 2.2,
+      "sizeMinSqft": 1000,
+      "sizeMaxSqft": 1750,
+      "landAcres": 6,
+      "totalUnits": 500,
+      "launchYear": 2023,
+      "possession": "2028",
+      "highlights": [
+        "Between Electronic City and Sarjapur Road",
+        "Hosa Road and NICE Road connectivity"
+      ]
+    },
+    {
+      "id": "godrej-bannerghatta",
+      "name": "Godrej Bannerghatta",
+      "builderId": "godrej",
+      "locality": "Bannerghatta Road",
+      "corridor": "Bannerghatta Road",
+      "zone": "South",
+      "lat": 12.8703,
+      "lng": 77.6042,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 1.3,
+      "priceMaxCr": 2.8,
+      "sizeMinSqft": 1150,
+      "sizeMaxSqft": 2050,
+      "landAcres": 7,
+      "totalUnits": 550,
+      "launchYear": 2022,
+      "possession": "2027",
+      "highlights": [
+        "Bannerghatta Road frontage",
+        "Near the Jayadeva metro interchange"
+      ]
+    },
+    {
+      "id": "godrej-lakeside-orchard",
+      "name": "Godrej Lakeside Orchard",
+      "builderId": "godrej",
+      "locality": "Sarjapur",
+      "corridor": "Sarjapur Road",
+      "zone": "South East",
+      "lat": 12.8631,
+      "lng": 77.7842,
+      "propertyType": "Plotted",
+      "status": "New launch",
+      "configurations": [
+        "Plots"
+      ],
+      "priceMinCr": 0.85,
+      "priceMaxCr": 2.2,
+      "sizeMinSqft": 1200,
+      "sizeMaxSqft": 2400,
+      "landAcres": 30,
+      "totalUnits": 500,
+      "launchYear": 2023,
+      "possession": "2026",
+      "highlights": [
+        "Plotted development near Sarjapur town",
+        "On the STRR / Sarjapur growth belt"
+      ]
+    },
+    {
+      "id": "godrej-msr-city",
+      "name": "Godrej MSR City",
+      "builderId": "godrej",
+      "locality": "Shettigere, Devanahalli",
+      "corridor": "Airport / NH-44",
+      "zone": "North",
+      "lat": 13.2087,
+      "lng": 77.6612,
+      "propertyType": "Plotted",
+      "status": "Under construction",
+      "configurations": [
+        "Plots"
+      ],
+      "priceMinCr": 0.9,
+      "priceMaxCr": 2.5,
+      "sizeMinSqft": 1200,
+      "sizeMaxSqft": 3000,
+      "landAcres": 42,
+      "totalUnits": 700,
+      "launchYear": 2022,
+      "possession": "2026",
+      "highlights": [
+        "Large plotted township near the airport",
+        "Close to the KIADB aerospace park"
+      ]
+    },
+    {
+      "id": "godrej-park-retreat",
+      "name": "Godrej Park Retreat",
+      "builderId": "godrej",
+      "locality": "Sarjapur Road",
+      "corridor": "Sarjapur Road",
+      "zone": "South East",
+      "lat": 12.8998,
+      "lng": 77.7211,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.25,
+      "priceMaxCr": 2.4,
+      "sizeMinSqft": 1100,
+      "sizeMaxSqft": 1850,
+      "landAcres": 12,
+      "totalUnits": 900,
+      "launchYear": 2022,
+      "possession": "2027",
+      "highlights": [
+        "Central green spine",
+        "Access to Wipro and RGA tech parks"
+      ]
+    },
+    {
+      "id": "godrej-reflections",
+      "name": "Godrej Reflections",
+      "builderId": "godrej",
+      "locality": "Harlur Road",
+      "corridor": "Sarjapur Road",
+      "zone": "South East",
+      "lat": 12.9066,
+      "lng": 77.6601,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.6,
+      "priceMaxCr": 3.1,
+      "sizeMinSqft": 1150,
+      "sizeMaxSqft": 1900,
+      "landAcres": 8,
+      "totalUnits": 600,
+      "launchYear": 2022,
+      "possession": "2027",
+      "highlights": [
+        "Lake-facing blocks",
+        "Established HSR periphery social infrastructure"
+      ]
+    },
+    {
+      "id": "godrej-royale-woods",
+      "name": "Godrej Royale Woods",
+      "builderId": "godrej",
+      "locality": "Devanahalli",
+      "corridor": "Airport / NH-44",
+      "zone": "North",
+      "lat": 13.2372,
+      "lng": 77.7093,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.55,
+      "priceMaxCr": 1.45,
+      "sizeMinSqft": 600,
+      "sizeMaxSqft": 1450,
+      "landAcres": 10,
+      "totalUnits": 800,
+      "launchYear": 2021,
+      "possession": "2027",
+      "highlights": [
+        "Near KIAL airport and the aerospace SEZ",
+        "Entry ticket sizes for North Bengaluru"
+      ]
+    },
+    {
+      "id": "godrej-splendour",
+      "name": "Godrej Splendour",
+      "builderId": "godrej",
+      "locality": "Belathur, Whitefield",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 12.9977,
+      "lng": 77.7614,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.75,
+      "priceMaxCr": 1.9,
+      "sizeMinSqft": 650,
+      "sizeMaxSqft": 1650,
+      "landAcres": 7,
+      "totalUnits": 700,
+      "launchYear": 2021,
+      "possession": "2027",
+      "highlights": [
+        "Walkable to Kadugodi Tree Park metro",
+        "Compact-format inventory"
+      ]
+    },
+    {
+      "id": "godrej-woodscapes",
+      "name": "Godrej Woodscapes",
+      "builderId": "godrej",
+      "locality": "Budigere Cross",
+      "corridor": "Old Madras Road",
+      "zone": "East",
+      "lat": 13.0341,
+      "lng": 77.7468,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 1.15,
+      "priceMaxCr": 2.6,
+      "sizeMinSqft": 1050,
+      "sizeMaxSqft": 2100,
+      "landAcres": 18,
+      "totalUnits": 1200,
+      "launchYear": 2023,
+      "possession": "2028",
+      "highlights": [
+        "Forest-themed masterplan",
+        "Near the Whitefield / KR Puram metro extension",
+        "Large central clubhouse"
+      ]
+    },
+    {
+      "id": "prestige-elysian",
+      "name": "Prestige Elysian",
+      "builderId": "prestige",
+      "locality": "Bannerghatta Road",
+      "corridor": "Bannerghatta Road",
+      "zone": "South",
+      "lat": 12.8891,
+      "lng": 77.5978,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 1.4,
+      "priceMaxCr": 3.4,
+      "sizeMinSqft": 1200,
+      "sizeMaxSqft": 2500,
+      "landAcres": 8,
+      "totalUnits": 550,
+      "launchYear": 2021,
+      "possession": "2026",
+      "highlights": [
+        "Arterial Bannerghatta Road location",
+        "Near the Fortis and Apollo hospital cluster"
+      ]
+    },
+    {
+      "id": "prestige-finsbury-park",
+      "name": "Prestige Finsbury Park",
+      "builderId": "prestige",
+      "locality": "Gummanahalli, Bagalur",
+      "corridor": "Airport / Bagalur",
+      "zone": "North",
+      "lat": 13.1408,
+      "lng": 77.6712,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.6,
+      "priceMaxCr": 1.7,
+      "sizeMinSqft": 620,
+      "sizeMaxSqft": 1550,
+      "landAcres": 25,
+      "totalUnits": 2500,
+      "launchYear": 2020,
+      "possession": "2026",
+      "highlights": [
+        "Hyde Park and Regent Park phases",
+        "Near the Bagalur IT investment region"
+      ]
+    },
+    {
+      "id": "prestige-glenbrook",
+      "name": "Prestige Glenbrook",
+      "builderId": "prestige",
+      "locality": "Whitefield",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 12.9744,
+      "lng": 77.7481,
+      "propertyType": "Apartment",
+      "status": "New launch",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.5,
+      "priceMaxCr": 3,
+      "sizeMinSqft": 1200,
+      "sizeMaxSqft": 2100,
+      "landAcres": 6,
+      "totalUnits": 450,
+      "launchYear": 2024,
+      "possession": "2029",
+      "highlights": [
+        "Compact premium format in core Whitefield",
+        "Metro proximate"
+      ]
+    },
+    {
+      "id": "prestige-great-acres",
+      "name": "Prestige Great Acres",
+      "builderId": "prestige",
+      "locality": "Devanahalli",
+      "corridor": "Airport / NH-44",
+      "zone": "North",
+      "lat": 13.2515,
+      "lng": 77.7182,
+      "propertyType": "Plotted",
+      "status": "Under construction",
+      "configurations": [
+        "Plots"
+      ],
+      "priceMinCr": 1,
+      "priceMaxCr": 3,
+      "sizeMinSqft": 1200,
+      "sizeMaxSqft": 3600,
+      "landAcres": 100,
+      "totalUnits": 1500,
+      "launchYear": 2022,
+      "possession": "2026",
+      "highlights": [
+        "Large plotted township near the airport",
+        "Gated infrastructure with clubhouse"
+      ]
+    },
+    {
+      "id": "prestige-kings-county",
+      "name": "Prestige Kings County",
+      "builderId": "prestige",
+      "locality": "Rajapura, Jigani",
+      "corridor": "Bannerghatta / Anekal",
+      "zone": "South",
+      "lat": 12.7902,
+      "lng": 77.6402,
+      "propertyType": "Villa",
+      "status": "Under construction",
+      "configurations": [
+        "Villa",
+        "Plots"
+      ],
+      "priceMinCr": 1.6,
+      "priceMaxCr": 4.5,
+      "sizeMinSqft": 1500,
+      "sizeMaxSqft": 3800,
+      "landAcres": 100,
+      "totalUnits": 900,
+      "launchYear": 2020,
+      "possession": "2026",
+      "highlights": [
+        "Villa and plot township off Bannerghatta",
+        "Low-density southern periphery"
+      ]
+    },
+    {
+      "id": "prestige-marigold",
+      "name": "Prestige Marigold",
+      "builderId": "prestige",
+      "locality": "Devanahalli",
+      "corridor": "Airport / NH-44",
+      "zone": "North",
+      "lat": 13.2288,
+      "lng": 77.6948,
+      "propertyType": "Plotted",
+      "status": "New launch",
+      "configurations": [
+        "Plots"
+      ],
+      "priceMinCr": 0.95,
+      "priceMaxCr": 2.8,
+      "sizeMinSqft": 1200,
+      "sizeMaxSqft": 3200,
+      "landAcres": 45,
+      "totalUnits": 700,
+      "launchYear": 2024,
+      "possession": "2027",
+      "highlights": [
+        "Plotted format on the airport corridor",
+        "Near the Devanahalli business park belt"
+      ]
+    },
+    {
+      "id": "prestige-park-grove",
+      "name": "Prestige Park Grove",
+      "builderId": "prestige",
+      "locality": "Gunjur, Whitefield",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 12.9294,
+      "lng": 77.7359,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK",
+        "4 BHK",
+        "Villa"
+      ],
+      "priceMinCr": 1.1,
+      "priceMaxCr": 6.5,
+      "sizeMinSqft": 700,
+      "sizeMaxSqft": 4200,
+      "landAcres": 72,
+      "totalUnits": 3600,
+      "launchYear": 2022,
+      "possession": "2028",
+      "highlights": [
+        "Integrated township with villas and apartments",
+        "Between Varthur and Sarjapur Road"
+      ]
+    },
+    {
+      "id": "prestige-pine-forest",
+      "name": "Prestige Pine Forest",
+      "builderId": "prestige",
+      "locality": "Kadugodi, Whitefield",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 12.9968,
+      "lng": 77.7549,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 2.4,
+      "priceMaxCr": 5,
+      "sizeMinSqft": 1900,
+      "sizeMaxSqft": 3400,
+      "landAcres": 9,
+      "totalUnits": 400,
+      "launchYear": 2022,
+      "possession": "2027",
+      "highlights": [
+        "Premium large-format inventory",
+        "Near the Whitefield metro terminus"
+      ]
+    },
+    {
+      "id": "prestige-primrose-hills",
+      "name": "Prestige Primrose Hills",
+      "builderId": "prestige",
+      "locality": "Talaghattapura, Kanakapura Road",
+      "corridor": "Kanakapura Road",
+      "zone": "South West",
+      "lat": 12.8666,
+      "lng": 77.5336,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK"
+      ],
+      "priceMinCr": 0.6,
+      "priceMaxCr": 1.4,
+      "sizeMinSqft": 620,
+      "sizeMaxSqft": 1250,
+      "landAcres": 15,
+      "totalUnits": 1600,
+      "launchYear": 2020,
+      "possession": "2026",
+      "highlights": [
+        "Affordable format on Kanakapura Road",
+        "Metro Green Line extension corridor"
+      ]
+    },
+    {
+      "id": "prestige-raintree-park",
+      "name": "Prestige Raintree Park",
+      "builderId": "prestige",
+      "locality": "Varthur",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 12.9412,
+      "lng": 77.7461,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 1.5,
+      "priceMaxCr": 4.2,
+      "sizeMinSqft": 1250,
+      "sizeMaxSqft": 3100,
+      "landAcres": 65,
+      "totalUnits": 3000,
+      "launchYear": 2023,
+      "possession": "2029",
+      "highlights": [
+        "Lakefront positioning on Varthur lake",
+        "Multi-phase launch"
+      ]
+    },
+    {
+      "id": "prestige-serenity-shores",
+      "name": "Prestige Serenity Shores",
+      "builderId": "prestige",
+      "locality": "Whitefield",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 12.9553,
+      "lng": 77.7268,
+      "propertyType": "Apartment",
+      "status": "New launch",
+      "configurations": [
+        "2 BHK",
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 1.8,
+      "priceMaxCr": 4.5,
+      "sizeMinSqft": 1350,
+      "sizeMaxSqft": 3000,
+      "landAcres": 22,
+      "totalUnits": 1400,
+      "launchYear": 2024,
+      "possession": "2029",
+      "highlights": [
+        "Waterbody-facing masterplan",
+        "Whitefield to Sarjapur linkage"
+      ]
+    },
+    {
+      "id": "prestige-southern-star",
+      "name": "Prestige Southern Star",
+      "builderId": "prestige",
+      "locality": "Begur Road",
+      "corridor": "Bannerghatta / Begur",
+      "zone": "South",
+      "lat": 12.8712,
+      "lng": 77.6271,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 0.9,
+      "priceMaxCr": 3.2,
+      "sizeMinSqft": 680,
+      "sizeMaxSqft": 2400,
+      "landAcres": 32,
+      "totalUnits": 2000,
+      "launchYear": 2022,
+      "possession": "2028",
+      "highlights": [
+        "Township scale on Begur Road",
+        "Electronic City and Bannerghatta employment access"
+      ]
+    },
+    {
+      "id": "prestige-sunrise-park",
+      "name": "Prestige Sunrise Park",
+      "builderId": "prestige",
+      "locality": "Electronic City",
+      "corridor": "Hosur Road / Electronic City",
+      "zone": "South",
+      "lat": 12.8452,
+      "lng": 77.6612,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.7,
+      "priceMaxCr": 1.9,
+      "sizeMinSqft": 650,
+      "sizeMaxSqft": 1600,
+      "landAcres": 25,
+      "totalUnits": 2200,
+      "launchYear": 2021,
+      "possession": "2027",
+      "highlights": [
+        "Inside the Electronic City catchment",
+        "Phased township with multiple enclaves"
+      ]
+    },
+    {
+      "id": "prestige-waterford",
+      "name": "Prestige Waterford",
+      "builderId": "prestige",
+      "locality": "Whitefield",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 12.9812,
+      "lng": 77.7371,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 1.7,
+      "priceMaxCr": 4,
+      "sizeMinSqft": 1300,
+      "sizeMaxSqft": 2900,
+      "landAcres": 17,
+      "totalUnits": 1100,
+      "launchYear": 2021,
+      "possession": "2027",
+      "highlights": [
+        "Core Whitefield near EPIP and ITPL",
+        "Low-density blocks"
+      ]
+    },
+    {
+      "id": "prestige-willow-tree",
+      "name": "Prestige Willow Tree",
+      "builderId": "prestige",
+      "locality": "Vidyaranyapura",
+      "corridor": "North Bengaluru",
+      "zone": "North",
+      "lat": 13.0812,
+      "lng": 77.5559,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1,
+      "priceMaxCr": 2,
+      "sizeMinSqft": 1050,
+      "sizeMaxSqft": 1700,
+      "landAcres": 5,
+      "totalUnits": 400,
+      "launchYear": 2021,
+      "possession": "2026",
+      "highlights": [
+        "Established North Bengaluru pocket",
+        "Hebbal and airport road access"
+      ]
+    },
+    {
+      "id": "prestige-city-sarjapur",
+      "name": "The Prestige City",
+      "builderId": "prestige",
+      "locality": "Ittangur, Sarjapur Road",
+      "corridor": "Sarjapur Road",
+      "zone": "South East",
+      "lat": 12.8779,
+      "lng": 77.7546,
+      "propertyType": "Township",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK",
+        "4 BHK",
+        "Villa",
+        "Plots"
+      ],
+      "priceMinCr": 0.95,
+      "priceMaxCr": 7,
+      "sizeMinSqft": 650,
+      "sizeMaxSqft": 4500,
+      "landAcres": 180,
+      "totalUnits": 7000,
+      "launchYear": 2021,
+      "possession": "2028",
+      "highlights": [
+        "Eden Park, Avalon Park and Meridian Park phases",
+        "Largest Prestige launch on the Sarjapur belt"
+      ]
+    }
+  ]
+}
