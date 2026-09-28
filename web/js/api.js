@@ -14,3 +14,6 @@ export const getRentals = (qs) => getJSON(`/api/rentals?${qs}`);
 export const getRentalFacets = () => getJSON('/api/rentals/facets');
 
 export const getRoads = () => getJSON('/api/roads');
+
+export const getDevelopers = () => getJSON('/api/developers?full=true');
+export const getDeveloper = (id) => getJSON(`/api/developers/${id}`);

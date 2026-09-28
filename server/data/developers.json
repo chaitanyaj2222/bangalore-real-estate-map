@@ -1,0 +1,360 @@
+{
+  "meta": {
+    "asOf": "2026-09",
+    "disclaimer": "Developer profiles are editorial summaries compiled from public sources. Figures such as project counts, delivered area and deal values are approximate and change often. Verify with the developer, their RERA filings or their investor disclosures before relying on anything here.",
+    "photoNote": "Leadership portraits are generated initial avatars. Drop a licensed photograph at web/img/leaders/<id>.jpg and point the leader's photo field at it to replace one."
+  },
+  "developers": [
+    {
+      "id": "sumadhura",
+      "builderId": null,
+      "name": "Sumadhura Infracon Private Limited",
+      "shortName": "Sumadhura",
+      "tradingAs": "Sumadhura Group",
+      "color": "#7c3aed",
+      "website": "https://www.sumadhuragroup.com",
+      "hq": "Bengaluru",
+      "founded": 1995,
+      "markets": ["Bengaluru", "Hyderabad", "Chennai"],
+      "rera": ["K-RERA (Karnataka)", "TS-RERA (Telangana)"],
+      "specialties": ["Premium residential apartments", "Commercial spaces", "Plotted development", "Logistics and warehousing"],
+      "summary": "A real estate developer with over 30 years of legacy, operating primarily in Bengaluru and Hyderabad.",
+      "history": [
+        "Sumadhura Infracon Private Limited, trading as Sumadhura Group, is a real estate developer with over 30 years of legacy, operating primarily in Bengaluru and Hyderabad. Founded in 1995, the company has delivered 56+ projects totalling 17 million square feet, housing over 12,000 families.",
+        "The group specialises in premium residential apartments, commercial spaces, plotted developments, and logistics and warehousing facilities. Their portfolio includes notable projects such as Sumadhura Edition and Sumadhura Folium in Bengaluru, and Sumadhura Palais Royale and Sumadhura Olympus in Hyderabad. They are registered with K-RERA (Karnataka) and TS-RERA (Telangana) and adhere to IGBC green standards for sustainability.",
+        "Customer feedback highlights exceptional build quality, generous spaces, and intentional amenity design. Residents appreciate the luxury interiors, seamless connectivity, and branded clubhouse experiences. The company emphasises a 'build right, not just fast' philosophy, focusing on longevity and trust over volume."
+      ],
+      "stats": [
+        { "label": "Years in operation", "value": "30+" },
+        { "label": "Projects delivered", "value": "56+" },
+        { "label": "Total area", "value": "17M+ sq ft" },
+        { "label": "Families housed", "value": "12,000+" }
+      ],
+      "notableProjects": [
+        { "name": "Sumadhura Edition", "city": "Bengaluru" },
+        { "name": "Sumadhura Folium", "city": "Bengaluru" },
+        { "name": "Sumadhura Palais Royale", "city": "Hyderabad" },
+        { "name": "Sumadhura Olympus", "city": "Hyderabad" }
+      ],
+      "recentDevelopments": [
+        { "title": "Chennai expansion", "when": "2025", "detail": "Acquired 52 acres in Red Hills for a Rs 400 crore Grade A industrial and logistics park, expected to be completed by December 2028." },
+        { "title": "East Bengaluru", "when": "2025", "detail": "Inked a Rs 3,500 crore Joint Development Agreement for a premium residential community in the Whitefield-Kannamangala corridor." }
+      ],
+      "leadership": [
+        { "name": "G. Madhusudhan", "role": "Chairman & Managing Director", "photo": null, "bio": "Founded Sumadhura in 1995 and has led its expansion from Bengaluru into Hyderabad and, more recently, industrial and logistics assets in Chennai." }
+      ]
+    },
+    {
+      "id": "prestige",
+      "builderId": "prestige",
+      "name": "Prestige Estates Projects Limited",
+      "shortName": "Prestige",
+      "tradingAs": "Prestige Group",
+      "color": "#2563eb",
+      "website": "https://www.prestigeconstructions.com",
+      "hq": "Bengaluru",
+      "founded": 1986,
+      "markets": ["Bengaluru", "Chennai", "Hyderabad", "Kochi", "Mumbai", "Pune", "NCR", "Goa"],
+      "rera": ["K-RERA (Karnataka)", "TN-RERA (Tamil Nadu)", "MahaRERA (Maharashtra)"],
+      "specialties": ["Residential apartments and villas", "Grade A office parks", "Retail malls", "Hospitality", "Plotted development"],
+      "summary": "Bengaluru's largest listed developer, spanning residential, office, retail and hospitality across South and West India.",
+      "history": [
+        "Prestige Estates Projects Limited, better known as the Prestige Group, was founded in Bengaluru in 1986 by Razack Sattar, whose family had run a retail business in the city since the 1950s. The company listed on the Indian exchanges in 2010 and has since become one of the country's largest developers by delivered area.",
+        "The group is unusual among Indian developers in operating across all four asset classes at scale: residential, office, retail and hospitality. Its office and mall portfolio, including the Forum malls and the UB City development, gave it meaningful recurring rental income, much of which was moved into a joint platform with Blackstone in 2020.",
+        "Prestige remains anchored in Bengaluru, where it carries one of the deepest residential pipelines of any single developer, but has pushed hard into Mumbai, Pune and NCR over the last several years. The group is run by the three Razack brothers, who between them cover residential, leasing and retail."
+      ],
+      "stats": [
+        { "label": "Years in operation", "value": "38+" },
+        { "label": "Projects completed", "value": "290+" },
+        { "label": "Total area", "value": "190M+ sq ft" },
+        { "label": "Cities", "value": "12+" }
+      ],
+      "notableProjects": [
+        { "name": "UB City", "city": "Bengaluru" },
+        { "name": "Forum Mall, Koramangala", "city": "Bengaluru" },
+        { "name": "Prestige Shantiniketan", "city": "Bengaluru" },
+        { "name": "Prestige Golfshire", "city": "Bengaluru" },
+        { "name": "Prestige Lakeside Habitat", "city": "Bengaluru" }
+      ],
+      "recentDevelopments": [
+        { "title": "NCR and Mumbai push", "when": "2024-2025", "detail": "Continued expansion outside its home market, with large launches in Mumbai's western suburbs and the NCR region." },
+        { "title": "Hospitality demerger", "when": "2024", "detail": "Moved to separate the hospitality business into its own listed entity to unlock value from the hotel portfolio." }
+      ],
+      "leadership": [
+        { "name": "Razack Sattar", "role": "Founder", "photo": null, "bio": "Started the Prestige Group in 1986, building out from the family's Bengaluru retail business." },
+        { "name": "Irfan Razack", "role": "Chairman & Managing Director", "photo": null, "bio": "Eldest of the three Razack brothers and the public face of the group, overseeing overall strategy and the residential business." },
+        { "name": "Rezwan Razack", "role": "Joint Managing Director", "photo": null, "bio": "Oversees the group's commercial and leasing portfolio. A noted collector and author on Indian paper currency." },
+        { "name": "Noaman Razack", "role": "Joint Managing Director", "photo": null, "bio": "Heads the retail and hospitality side of the group, including the Forum mall franchise." }
+      ]
+    },
+    {
+      "id": "sobha",
+      "builderId": null,
+      "name": "Sobha Limited",
+      "shortName": "Sobha",
+      "tradingAs": "Sobha",
+      "color": "#0f766e",
+      "website": "https://www.sobha.com",
+      "hq": "Bengaluru",
+      "founded": 1995,
+      "markets": ["Bengaluru", "Gurugram", "Pune", "Chennai", "Kochi", "Thrissur", "Coimbatore", "GIFT City"],
+      "rera": ["K-RERA (Karnataka)", "HRERA (Haryana)", "TN-RERA (Tamil Nadu)"],
+      "specialties": ["Luxury residential", "Contractual and turnkey construction", "Interiors and glazing", "Plotted development"],
+      "summary": "Backward-integrated luxury builder known for doing its own concrete, joinery, glazing and interiors in-house.",
+      "history": [
+        "Sobha Limited was founded in Bengaluru in 1995 by P.N.C. Menon, a Kerala-born entrepreneur who had spent the previous two decades building an interior contracting business in Oman. That contracting DNA shaped the company: Sobha is the most backward-integrated large developer in India, running its own concrete plants, glazing and metalwork units, joinery factories and interior divisions rather than subcontracting them.",
+        "The in-house model is the company's defining trait and the reason its build quality is consistently rated at the top of the Indian market. It also makes Sobha slower and more capital-heavy than its land-light peers, a trade-off the company has defended for three decades.",
+        "Alongside its own developments, Sobha runs a substantial contractual business, executing campuses and facilities for corporate clients including Infosys, Dell, Bosch and Timken. The founder's son, Ravi Menon, has chaired the company since 2012."
+      ],
+      "stats": [
+        { "label": "Years in operation", "value": "30+" },
+        { "label": "Residential projects", "value": "160+" },
+        { "label": "Total area delivered", "value": "130M+ sq ft" },
+        { "label": "Cities", "value": "14+" }
+      ],
+      "notableProjects": [
+        { "name": "Sobha City", "city": "Bengaluru" },
+        { "name": "Sobha Dream Acres", "city": "Bengaluru" },
+        { "name": "Sobha Indraprastha", "city": "Bengaluru" },
+        { "name": "Sobha International City", "city": "Gurugram" }
+      ],
+      "recentDevelopments": [
+        { "title": "Rights issue and deleveraging", "when": "2024", "detail": "Raised fresh equity through a rights issue to cut net debt and fund a larger launch pipeline." },
+        { "title": "North India expansion", "when": "2024-2025", "detail": "Scaled up the Gurugram and NCR portfolio alongside new launches in Kerala and Tamil Nadu." }
+      ],
+      "leadership": [
+        { "name": "P.N.C. Menon", "role": "Founder & Chairman Emeritus", "photo": null, "bio": "Started as an interior contractor in Oman in 1976 and founded Sobha in Bengaluru in 1995. A signatory of the Giving Pledge." },
+        { "name": "Ravi P.N.C. Menon", "role": "Chairman", "photo": null, "bio": "Son of the founder. Took over as Chairman in 2012 and has steered the group's expansion beyond Karnataka." }
+      ]
+    },
+    {
+      "id": "puravankara",
+      "builderId": null,
+      "name": "Puravankara Limited",
+      "shortName": "Puravankara",
+      "tradingAs": "Puravankara Group",
+      "color": "#be123c",
+      "website": "https://www.puravankara.com",
+      "hq": "Bengaluru",
+      "founded": 1975,
+      "markets": ["Bengaluru", "Chennai", "Hyderabad", "Kochi", "Coimbatore", "Mumbai", "Pune", "Goa", "Kolkata"],
+      "rera": ["K-RERA (Karnataka)", "TN-RERA (Tamil Nadu)", "MahaRERA (Maharashtra)"],
+      "specialties": ["Premium residential (Purva)", "Affordable housing (Provident)", "Plotted development", "Commercial"],
+      "summary": "One of Bengaluru's oldest developers, running a premium brand and a separate affordable-housing arm.",
+      "history": [
+        "Puravankara Limited was founded in 1975 by Ravi Puravankara, making it one of the oldest continuously operating developers in Bengaluru. The company began in Mumbai before moving its base to Bengaluru, where it grew alongside the city's IT boom.",
+        "The group runs a deliberate two-brand structure. Purva covers premium and luxury residential, while Provident Housing, launched in 2008, targets the affordable and mid-income segment as a separate operating company. A third line, Purva Land, handles plotted development.",
+        "Puravankara listed in 2007 and has since expanded across nine cities, with a growing emphasis on redevelopment projects in Mumbai and a large land bank in South India. Ravi Puravankara's son, Ashish, has served as Managing Director since 2016."
+      ],
+      "stats": [
+        { "label": "Years in operation", "value": "50+" },
+        { "label": "Projects completed", "value": "90+" },
+        { "label": "Total area delivered", "value": "80M+ sq ft" },
+        { "label": "Cities", "value": "9+" }
+      ],
+      "notableProjects": [
+        { "name": "Purva Venezia", "city": "Bengaluru" },
+        { "name": "Purva Highland", "city": "Bengaluru" },
+        { "name": "Provident Sunworth", "city": "Bengaluru" },
+        { "name": "Purva Windermere", "city": "Chennai" }
+      ],
+      "recentDevelopments": [
+        { "title": "Mumbai redevelopment", "when": "2024-2025", "detail": "Won a series of society redevelopment mandates in Mumbai's western suburbs, a capital-light route into the city." },
+        { "title": "Provident scale-up", "when": "2024", "detail": "Expanded the affordable-housing arm with new launches in Bengaluru and Coimbatore." }
+      ],
+      "leadership": [
+        { "name": "Ravi Puravankara", "role": "Founder & Chairman", "photo": null, "bio": "Founded the company in 1975 and built it into one of South India's largest residential developers across five decades." },
+        { "name": "Ashish Puravankara", "role": "Managing Director", "photo": null, "bio": "Son of the founder. Managing Director since 2016, with a focus on the Provident affordable brand and the group's multi-city expansion." }
+      ]
+    },
+    {
+      "id": "dsmax",
+      "builderId": null,
+      "name": "DS-MAX Properties Private Limited",
+      "shortName": "DS-MAX",
+      "tradingAs": "DS-MAX Properties",
+      "color": "#ea580c",
+      "website": "https://www.dsmaxproperties.com",
+      "hq": "Bengaluru",
+      "founded": 2008,
+      "markets": ["Bengaluru"],
+      "rera": ["K-RERA (Karnataka)"],
+      "specialties": ["Affordable and mid-income apartments", "High-volume residential", "Plotted development"],
+      "summary": "Bengaluru's highest-volume affordable housing developer, working almost entirely within the city.",
+      "history": [
+        "DS-MAX Properties was founded in Bengaluru in 2008 by K.V. Satish and has grown into the city's most prolific developer by project count, operating at a volume that few peers attempt. The company works almost exclusively in Bengaluru and almost exclusively in the affordable and mid-income segments.",
+        "The model is built on speed and scale: smaller land parcels across the city's outer belts, standardised designs, tight construction cycles and price points aimed at first-time buyers rather than investors. That has made DS-MAX a familiar name on the periphery of the city, particularly in the north and north-west.",
+        "The volume-first approach is the company's clear differentiator from the premium developers it shares the market with, and its pricing has kept it visible through several cycles in the Bengaluru market."
+      ],
+      "stats": [
+        { "label": "Years in operation", "value": "17+" },
+        { "label": "Projects delivered", "value": "100+" },
+        { "label": "Focus", "value": "Affordable" },
+        { "label": "Primary market", "value": "Bengaluru" }
+      ],
+      "notableProjects": [
+        { "name": "DS-MAX Sunrise", "city": "Bengaluru" },
+        { "name": "DS-MAX Signature", "city": "Bengaluru" },
+        { "name": "DS-MAX Sportivo", "city": "Bengaluru" }
+      ],
+      "recentDevelopments": [
+        { "title": "North Bengaluru focus", "when": "2024-2025", "detail": "Continued a steady launch cadence of affordable projects along the northern and north-western corridors of the city." }
+      ],
+      "leadership": [
+        { "name": "K.V. Satish", "role": "Founder & Managing Director", "photo": null, "bio": "Founded DS-MAX in 2008 and built it around a high-volume affordable housing model focused on the Bengaluru market." }
+      ]
+    },
+    {
+      "id": "vajram",
+      "builderId": null,
+      "name": "Vajram Estates Private Limited",
+      "shortName": "Vajram",
+      "tradingAs": "Vajram Group",
+      "color": "#0369a1",
+      "website": "https://www.vajramgroup.com",
+      "hq": "Bengaluru",
+      "founded": 2007,
+      "markets": ["Bengaluru"],
+      "rera": ["K-RERA (Karnataka)"],
+      "specialties": ["Mid-premium residential apartments", "Plotted development", "Commercial"],
+      "summary": "Bengaluru-focused developer concentrated on the northern corridor around the airport road.",
+      "history": [
+        "Vajram Group is a Bengaluru-based developer operating primarily in the mid-premium residential segment. The company has concentrated much of its portfolio along the northern corridor of the city, in and around the Hebbal, Thanisandra and airport-road belts that grew with the move of Kempegowda International Airport.",
+        "Its portfolio spans apartments, plotted development and a smaller commercial line, all within Karnataka and largely within Bengaluru itself. Projects such as Vajram Newtown and Vajram Tiara sit in the north Bengaluru growth belt.",
+        "The group is smaller than the listed developers it competes with, and works at a scale that keeps it close to a single market rather than pursuing multi-city expansion."
+      ],
+      "stats": [
+        { "label": "Years in operation", "value": "18+" },
+        { "label": "Focus", "value": "North Bengaluru" },
+        { "label": "Segment", "value": "Mid-premium" },
+        { "label": "Primary market", "value": "Bengaluru" }
+      ],
+      "notableProjects": [
+        { "name": "Vajram Newtown", "city": "Bengaluru" },
+        { "name": "Vajram Tiara", "city": "Bengaluru" },
+        { "name": "Vajram Esteva", "city": "Bengaluru" }
+      ],
+      "recentDevelopments": [
+        { "title": "North corridor launches", "when": "2024-2025", "detail": "Continued to add residential inventory along the Thanisandra and airport-road corridors." }
+      ],
+      "leadership": []
+    },
+    {
+      "id": "godrej",
+      "builderId": "godrej",
+      "name": "Godrej Properties Limited",
+      "shortName": "Godrej",
+      "tradingAs": "Godrej Properties",
+      "color": "#2f8f79",
+      "website": "https://www.godrejproperties.com",
+      "hq": "Mumbai",
+      "founded": 1990,
+      "markets": ["Mumbai", "NCR", "Bengaluru", "Pune", "Hyderabad", "Chennai", "Kolkata", "Ahmedabad"],
+      "rera": ["K-RERA (Karnataka)", "MahaRERA (Maharashtra)", "HRERA (Haryana)"],
+      "specialties": ["Residential apartments", "Plotted development", "Township development", "Commercial"],
+      "summary": "The real estate arm of the 125-year-old Godrej Group, built on a land-light joint development model.",
+      "history": [
+        "Godrej Properties is the real estate arm of the Godrej Group, a conglomerate founded in 1897. The property business was established in 1990 and listed in 2010, carrying one of the strongest brand names in Indian business into a sector where trust is scarce.",
+        "The company's defining strategy is land-light: rather than buying land outright, Godrej Properties largely partners with landowners through joint development and joint venture agreements, contributing brand, design, execution and sales in exchange for a share of revenue. That model let it scale quickly across eight cities without carrying a heavy land bank.",
+        "In Bengaluru the company has built a large pipeline across the eastern and northern corridors. Group-wide, the 2024 restructuring split the Godrej conglomerate between two family branches, with the listed companies including Godrej Properties staying with Adi and Nadir Godrej's side of the family."
+      ],
+      "stats": [
+        { "label": "Years in operation", "value": "35+" },
+        { "label": "Group founded", "value": "1897" },
+        { "label": "Cities", "value": "8+" },
+        { "label": "Model", "value": "Land-light JD/JV" }
+      ],
+      "notableProjects": [
+        { "name": "Godrej Woodsman Estate", "city": "Bengaluru" },
+        { "name": "Godrej Reflections", "city": "Bengaluru" },
+        { "name": "Godrej Garden City", "city": "Ahmedabad" },
+        { "name": "The Trees", "city": "Mumbai" }
+      ],
+      "recentDevelopments": [
+        { "title": "Record bookings", "when": "2024-2025", "detail": "Posted among the highest residential booking values in the listed Indian developer set, driven by NCR and Mumbai." },
+        { "title": "Group restructuring", "when": "2024", "detail": "The Godrej family split the conglomerate between two branches; the listed entities including Godrej Properties remained with the Adi and Nadir Godrej side." }
+      ],
+      "leadership": [
+        { "name": "Pirojsha Godrej", "role": "Executive Chairperson", "photo": null, "bio": "Joined Godrej Properties in 2004 and led it as CEO before becoming Executive Chairperson. Architect of the land-light joint development strategy." },
+        { "name": "Gaurav Pandey", "role": "Managing Director & CEO", "photo": null, "bio": "Took over as MD and CEO in 2021, having previously led the company's sales and marketing function." }
+      ]
+    },
+    {
+      "id": "brigade",
+      "builderId": null,
+      "name": "Brigade Enterprises Limited",
+      "shortName": "Brigade",
+      "tradingAs": "Brigade Group",
+      "color": "#c2410c",
+      "website": "https://www.brigadegroup.com",
+      "hq": "Bengaluru",
+      "founded": 1986,
+      "markets": ["Bengaluru", "Chennai", "Hyderabad", "Mysuru", "Kochi", "GIFT City"],
+      "rera": ["K-RERA (Karnataka)", "TN-RERA (Tamil Nadu)", "TS-RERA (Telangana)"],
+      "specialties": ["Residential", "Office parks", "Retail", "Hospitality", "Education"],
+      "summary": "Diversified Bengaluru developer spanning homes, offices, malls, hotels and schools.",
+      "history": [
+        "Brigade Enterprises was founded in Bengaluru in 1986 by M.R. Jaishankar and has grown into one of South India's most diversified property groups, operating across residential, office, retail, hospitality and education.",
+        "The group's mixed-use developments are its signature: Brigade Gateway and Brigade Orchards combine apartments, offices, retail, hotels and schools on single campuses. It also runs a substantial hospitality portfolio and the World Trade Center properties in Bengaluru and Chennai.",
+        "Brigade listed in 2007 and has expanded steadily across Chennai, Hyderabad and Kochi while keeping Bengaluru as its core market. Pavitra Shankar, daughter of the founder, became Managing Director in 2023, and the group continued under family leadership after M.R. Jaishankar's death in 2025."
+      ],
+      "stats": [
+        { "label": "Years in operation", "value": "38+" },
+        { "label": "Total area developed", "value": "85M+ sq ft" },
+        { "label": "Cities", "value": "6+" },
+        { "label": "Segments", "value": "5" }
+      ],
+      "notableProjects": [
+        { "name": "Brigade Gateway", "city": "Bengaluru" },
+        { "name": "World Trade Center", "city": "Bengaluru" },
+        { "name": "Brigade Orchards", "city": "Bengaluru" },
+        { "name": "Brigade Exotica", "city": "Bengaluru" }
+      ],
+      "recentDevelopments": [
+        { "title": "Chennai and Hyderabad growth", "when": "2024-2025", "detail": "Added residential and office projects outside the home market while expanding the GIFT City presence." },
+        { "title": "Leadership transition", "when": "2023-2025", "detail": "Pavitra Shankar took over as Managing Director in 2023, continuing family leadership of the group." }
+      ],
+      "leadership": [
+        { "name": "M.R. Jaishankar", "role": "Founder", "photo": null, "bio": "Founded Brigade in 1986 and built it into a diversified property group across five business lines before his death in 2025." },
+        { "name": "Pavitra Shankar", "role": "Managing Director", "photo": null, "bio": "Daughter of the founder. Became Managing Director in 2023 after leading the residential business." }
+      ]
+    },
+    {
+      "id": "assetz",
+      "builderId": "assetz",
+      "name": "Assetz Property Group",
+      "shortName": "Assetz",
+      "tradingAs": "Assetz Property Group",
+      "color": "#d97706",
+      "website": "https://www.assetzproperty.com",
+      "hq": "Bengaluru",
+      "founded": 2006,
+      "markets": ["Bengaluru"],
+      "rera": ["K-RERA (Karnataka)"],
+      "specialties": ["Design-led residential", "Plotted development", "Warehousing and industrial", "Commercial"],
+      "summary": "Singapore-origin, Bengaluru-focused developer known for design-led mid-to-premium apartments.",
+      "history": [
+        "Assetz Property Group was founded in 2006 with Singapore roots and has concentrated almost entirely on Bengaluru since. The group positions itself on design rather than volume, working with external architects on projects that read differently from the standard Bengaluru apartment block.",
+        "Its residential portfolio sits mostly in the eastern and northern corridors of the city, in the mid-to-premium segment. Alongside homes, the group runs a warehousing and industrial arm that has grown with the logistics demand around Bengaluru's outer belts.",
+        "The Singapore connection shows in the group's approach to master planning and landscape, and it has stayed deliberately single-city rather than chasing a multi-market pipeline."
+      ],
+      "stats": [
+        { "label": "Years in operation", "value": "19+" },
+        { "label": "Focus", "value": "Design-led" },
+        { "label": "Origin", "value": "Singapore" },
+        { "label": "Primary market", "value": "Bengaluru" }
+      ],
+      "notableProjects": [
+        { "name": "Assetz Marq", "city": "Bengaluru" },
+        { "name": "Assetz 63 Degree East", "city": "Bengaluru" },
+        { "name": "Assetz Soul and Soil", "city": "Bengaluru" }
+      ],
+      "recentDevelopments": [
+        { "title": "Industrial and warehousing", "when": "2024-2025", "detail": "Continued to grow the logistics and warehousing arm alongside the residential pipeline." }
+      ],
+      "leadership": [
+        { "name": "Ben Salmon", "role": "Co-founder & Chief Executive", "photo": null, "bio": "Co-founded Assetz in 2006, bringing a Singapore-market background to a Bengaluru-focused, design-led development business." }
+      ]
+    }
+  ]
+}

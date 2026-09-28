@@ -5,8 +5,9 @@ import { getStats, getRoads } from './api.js';
 import { map, renderRoads, setRoadCategory, locateUser, onUserLocation, getUserLatLng, fitTo } from './mapview.js';
 import * as buy from './buy.js';
 import * as rent from './rent.js';
+import * as dev from './developers.js';
 
-const modes = { buy, rent };
+const modes = { buy, rent, dev };
 let mode = 'buy';
 let searchText = '';
 let lastData = { buy: null, rent: null };
@@ -36,18 +37,23 @@ function syncUrl() {
   const qs = current().queryString(searchText);
   if (mode !== 'buy') qs.set('mode', mode);
   const id = current().getSelectedId();
-  if (id) qs.set(mode === 'buy' ? 'project' : 'home', id);
+  const idParam = { buy: 'project', rent: 'home', dev: 'developer' }[mode];
+  if (id) qs.set(idParam, id);
   history.replaceState(null, '', qs.toString() ? `?${qs}` : location.pathname);
 }
 
 function readUrl() {
   const qs = new URLSearchParams(location.search);
-  if (qs.get('mode') === 'rent') mode = 'rent';
+  const wanted = qs.get('mode');
+  if (wanted === 'rent' || wanted === 'dev') mode = wanted;
   searchText = qs.get('q') || '';
 
-  const sets = mode === 'buy'
-    ? [['builder', 'builder'], ['zone', 'zone'], ['type', 'type'], ['status', 'status'], ['config', 'config']]
-    : [['bhk', 'bhk'], ['zone', 'zone'], ['type', 'type'], ['furnishing', 'furnishing']];
+  const SETS = {
+    buy: [['builder', 'builder'], ['zone', 'zone'], ['type', 'type'], ['status', 'status'], ['config', 'config']],
+    rent: [['bhk', 'bhk'], ['zone', 'zone'], ['type', 'type'], ['furnishing', 'furnishing']],
+    dev: [['market', 'market']],
+  };
+  const sets = SETS[mode];
 
   for (const [stateKey, param] of sets) {
     const raw = qs.get(param);
@@ -60,7 +66,7 @@ function readUrl() {
   if (qs.get('pets') === 'true') rent.state.pets = true;
   if (qs.get('sort')) current().state.sort = qs.get('sort');
 
-  return qs.get('project') || qs.get('home') || null;
+  return qs.get('project') || qs.get('home') || qs.get('developer') || null;
 }
 
 /* ---------- detail ---------- */
@@ -68,6 +74,7 @@ function readUrl() {
 function closeDetail() {
   buy.clearSelection();
   rent.clearSelection();
+  dev.clearSelection();
   $('#detail').hidden = true;
   syncUrl();
 }
@@ -77,6 +84,7 @@ function closeDetail() {
 const SORTS = {
   buy: [['name', 'Name'], ['newest', 'Newest launch'], ['price_asc', 'Price: low to high'], ['price_desc', 'Price: high to low'], ['size', 'Land area']],
   rent: [['rent_asc', 'Rent: low to high'], ['rent_desc', 'Rent: high to low'], ['rating', 'Rating'], ['size', 'Size'], ['name', 'Name']],
+  dev: [['name', 'Name'], ['oldest', 'Oldest first'], ['newest', 'Newest first']],
 };
 
 function renderSortOptions() {
@@ -86,31 +94,51 @@ function renderSortOptions() {
   select.value = current().state.sort;
 }
 
-async function setMode(next, { refit = true } = {}) {
-  if (next === mode) return;
-  mode = next;
-  closeDetail();
+const PLACEHOLDERS = {
+  buy: 'Search project, locality or corridor…',
+  rent: 'Search locality, BHK or furnishing…',
+  dev: 'Search developer, founder or project…',
+};
 
+/** Repaint every piece of chrome that depends on the active mode. */
+function paintChrome() {
   for (const btn of document.querySelectorAll('.mode-btn')) {
     btn.setAttribute('aria-pressed', String(btn.dataset.mode === mode));
   }
   document.body.classList.toggle('mode-rent', mode === 'rent');
+  document.body.classList.toggle('mode-dev', mode === 'dev');
+  $('#devPane').hidden = mode !== 'dev';
   $('#results').className = mode === 'rent' ? 'results results-rent' : 'results';
-  $('#search').placeholder = mode === 'rent'
-    ? 'Search locality, BHK or furnishing…'
-    : 'Search project, locality or corridor…';
+  $('#search').placeholder = PLACEHOLDERS[mode];
+  syncMobileToggleLabel();
 
   renderSortOptions();
   current().renderFilters($('#filterGroups'), () => refresh());
   renderLegend();
   renderTopbarStats();
-  $('#disclaimer').textContent = mode === 'rent' ? rentFacets.meta.disclaimer : saleStats.meta.disclaimer;
+  if (mode !== 'dev') {
+    $('#disclaimer').textContent = mode === 'rent' ? rentFacets.meta.disclaimer : saleStats.meta.disclaimer;
+  }
+}
+
+function syncMobileToggleLabel() {
+  const onSecond = document.body.classList.contains('show-map');
+  const second = mode === 'dev' ? 'Profile' : 'Map';
+  $('#mobileToggle').textContent = onSecond ? 'List' : second;
+}
+
+async function setMode(next, { refit = true } = {}) {
+  if (next === mode) return;
+  mode = next;
+  closeDetail();
+  paintChrome();
   await refresh({ refit });
 }
 
 /* ---------- legend + road controls ---------- */
 
 function renderLegend() {
+  if (mode === 'dev') return;
   const wrap = $('#legend');
   wrap.textContent = '';
 
@@ -148,6 +176,7 @@ function renderLegend() {
 
 let buyFacets = null;
 let rentFacets = null;
+let devAll = [];
 let roadList = [];
 const getRoadList = () => roadList;
 
@@ -181,6 +210,21 @@ let saleStats = null;
 function renderTopbarStats() {
   const wrap = $('#topbarStats');
   wrap.textContent = '';
+
+  if (mode === 'dev') {
+    const cities = new Set(devAll.flatMap((d) => d.markets));
+    const leaders = devAll.reduce((n, d) => n + d.leadership.length, 0);
+    const oldest = Math.min(...devAll.map((d) => d.founded));
+    for (const [value, label] of [
+      [String(devAll.length), 'Developers'],
+      [String(cities.size), 'Cities'],
+      [String(leaders), 'Leaders'],
+      [String(oldest), 'Since'],
+    ]) {
+      wrap.append(el('div', { class: 'stat' }, el('b', { text: value }), el('span', { text: label })));
+    }
+    return;
+  }
 
   const pairs = mode === 'buy'
     ? [
@@ -225,8 +269,8 @@ function wireEvents() {
   toggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('show-map');
     const onMap = document.body.classList.contains('show-map');
-    toggleBtn.textContent = onMap ? 'List' : 'Map';
-    if (!onMap) return;
+    syncMobileToggleLabel();
+    if (!onMap || mode === 'dev') return;
     // The map container was display:none until now, so Leaflet has stale dimensions.
     const id = current().getSelectedId();
     const active = id && current().getRows().find((x) => x.id === id);
@@ -245,6 +289,7 @@ function wireEvents() {
 
   buy.setOnSelect(syncUrl);
   rent.setOnSelect(syncUrl);
+  dev.setOnSelect(syncUrl);
 }
 
 /* ---------- boot ---------- */
@@ -253,36 +298,27 @@ async function init() {
   const pendingId = readUrl();
   $('#search').value = searchText;
 
-  const [stats, facetsBuy, facetsRent, roads] = await Promise.all([
+  const [stats, facetsBuy, facetsRent, roads, developers] = await Promise.all([
     getStats(),
     buy.loadFacets(),
     rent.loadFacets(),
     getRoads(),
+    dev.loadAll(),
   ]);
 
   saleStats = stats;
   buyFacets = facetsBuy;
   rentFacets = facetsRent;
+  devAll = developers.developers;
   roadList = roads.roads;
   renderRoads(roadList);
   setRoadCategory('ring', true);
 
-  $('#disclaimer').textContent = mode === 'rent' ? rentFacets.meta.disclaimer : stats.meta.disclaimer;
-  renderTopbarStats();
-
-  // Paint the mode we booted into without going through the switch animation.
-  document.body.classList.toggle('mode-rent', mode === 'rent');
-  for (const btn of document.querySelectorAll('.mode-btn')) {
-    btn.setAttribute('aria-pressed', String(btn.dataset.mode === mode));
-  }
-  $('#results').className = mode === 'rent' ? 'results results-rent' : 'results';
-  renderSortOptions();
-  current().renderFilters($('#filterGroups'), () => refresh());
-  renderLegend();
+  paintChrome();
   wireEvents();
 
   await refresh();
-  fitTo(current().getRows(), { maxZoom: mode === 'rent' ? 14 : 13 });
+  if (mode !== 'dev') fitTo(current().getRows(), { maxZoom: mode === 'rent' ? 14 : 13 });
 
   if (pendingId) current().select(pendingId);
 }

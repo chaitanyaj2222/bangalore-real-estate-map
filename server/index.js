@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url';
 import express from 'express';
 import { router as apiRouter } from './routes/projects.js';
 import { router as rentalRouter } from './routes/rentals.js';
+import { router as developerRouter } from './routes/developers.js';
 import { store } from './lib/store.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -24,6 +25,7 @@ app.get('/healthz', (req, res) => {
 
 app.use('/api', apiRouter);
 app.use('/api', rentalRouter);
+app.use('/api', developerRouter);
 app.use(express.static(WEB_DIR, { extensions: ['html'] }));
 
 app.use((req, res) => {

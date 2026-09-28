@@ -2,6 +2,7 @@
 import { store } from './store.js';
 import { rentalStore } from './rentals.js';
 import { roadStore } from './roads.js';
+import { developerStore } from './developers.js';
 
 const BLR = { latMin: 12.6, latMax: 13.5, lngMin: 77.2, lngMax: 78.1 };
 
@@ -78,13 +79,55 @@ for (const road of roadStore.roads) {
   }
 }
 
+/* ---------- developers ---------- */
+
+const developerIds = new Set();
+const builderIds = new Set(store.builders.map((b) => b.id));
+
+for (const d of developerStore.developers) {
+  const where = `developer ${d.id || d.name || '(unnamed)'}`;
+  checkRequired(d, ['id', 'name', 'shortName', 'color', 'website', 'hq', 'founded', 'summary'], where);
+
+  if (developerIds.has(d.id)) errors.push(`${where}: duplicate id`);
+  developerIds.add(d.id);
+
+  if (d.builderId && !builderIds.has(d.builderId)) {
+    errors.push(`${where}: builderId "${d.builderId}" is not in builders.json`);
+  }
+  if (d.founded && (d.founded < 1850 || d.founded > new Date().getFullYear())) {
+    errors.push(`${where}: implausible founding year ${d.founded}`);
+  }
+
+  for (const key of ['history', 'stats', 'notableProjects', 'markets', 'specialties', 'rera', 'recentDevelopments']) {
+    if (!Array.isArray(d[key])) errors.push(`${where}: "${key}" must be an array`);
+    else if (!d[key].length) warnings.push(`${where}: "${key}" is empty`);
+  }
+
+  for (const s of d.stats || []) {
+    if (!s.label || !s.value) errors.push(`${where}: stat entry needs both label and value`);
+  }
+  for (const r of d.recentDevelopments || []) {
+    if (!r.title || !r.detail) errors.push(`${where}: recent development needs title and detail`);
+  }
+  for (const p of d.notableProjects || []) {
+    if (!p.name || !p.city) errors.push(`${where}: notable project needs name and city`);
+  }
+
+  if (!d.leadership.length) warnings.push(`${where}: no leadership recorded`);
+  for (const person of d.leadership) {
+    if (!person.name || !person.role) errors.push(`${where}: leader needs both name and role`);
+    if (!person.photo) warnings.push(`${where}: "${person.name}" has no photograph, using initials`);
+  }
+}
+
 /* ---------- report ---------- */
 
 for (const e of errors) console.error(`ERROR  ${e}`);
 for (const w of warnings) console.warn(`warn   ${w}`);
 console.log(
   `\n${store.projects.length} projects, ${store.builders.length} builders, ` +
-  `${rentalStore.rentals.length} rentals, ${roadStore.roads.length} roads: ` +
+  `${rentalStore.rentals.length} rentals, ${roadStore.roads.length} roads, ` +
+  `${developerStore.developers.length} developers: ` +
   `${errors.length} errors, ${warnings.length} warnings.`
 );
 process.exit(errors.length ? 1 : 0);
