@@ -26,6 +26,7 @@ function filtersFrom(query) {
     types: list(query.type),
     statuses: list(query.status),
     configurations: list(query.config),
+    kiadb: list(query.kiadb),
     minPriceCr: num(query.minPrice),
     maxPriceCr: num(query.maxPrice),
     q: query.q,

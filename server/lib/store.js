@@ -3,6 +3,62 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const DATA_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'data');
+const DOCS_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '..', 'web', 'docs');
+
+const DOC_TYPES = {
+  '.pdf': 'PDF',
+  '.jpg': 'Image', '.jpeg': 'Image', '.png': 'Image', '.webp': 'Image',
+  '.mp4': 'Video', '.webm': 'Video', '.mov': 'Video',
+};
+
+const humanSize = (bytes) =>
+  bytes >= 1024 * 1024 ? `${(bytes / 1024 / 1024).toFixed(1)} MB` : `${Math.max(1, Math.round(bytes / 1024))} KB`;
+
+/**
+ * Files dropped in web/docs/<project-id>/ show up on that project without a
+ * JSON edit. Scanned once at boot, so a new file needs a server restart.
+ */
+function loadDocuments() {
+  const byProject = new Map();
+  let dirs;
+  try {
+    dirs = fs.readdirSync(DOCS_DIR, { withFileTypes: true });
+  } catch {
+    return byProject;
+  }
+  for (const dir of dirs) {
+    if (!dir.isDirectory()) continue;
+    const files = fs.readdirSync(path.join(DOCS_DIR, dir.name), { withFileTypes: true });
+    const docs = files
+      .filter((f) => f.isFile() && !f.name.startsWith('.') && !f.name.startsWith('_'))
+      .filter((f) => DOC_TYPES[path.extname(f.name).toLowerCase()])
+      .map((f) => {
+        const bytes = fs.statSync(path.join(DOCS_DIR, dir.name, f.name)).size;
+        return {
+          name: f.name,
+          type: DOC_TYPES[path.extname(f.name).toLowerCase()],
+          bytes,
+          size: humanSize(bytes),
+          url: `/docs/${encodeURIComponent(dir.name)}/${encodeURIComponent(f.name)}`,
+        };
+      })
+      .sort((a, b) => a.name.localeCompare(b.name));
+    if (docs.length) byProject.set(dir.name, docs);
+  }
+  return byProject;
+}
+
+const KIADB_CATCHMENT_KM = 10;
+const R_KM = 6371;
+const rad = (d) => (d * Math.PI) / 180;
+
+/** Straight-line distance in km. */
+function haversineKm(a, b) {
+  const dLat = rad(b.lat - a.lat);
+  const dLng = rad(b.lng - a.lng);
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(dLng / 2) ** 2;
+  return 2 * R_KM * Math.asin(Math.sqrt(h));
+}
 
 /**
  * In-memory store backed by the JSON files in server/data.
@@ -17,22 +73,29 @@ class Store {
   load() {
     const builderFile = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'builders.json'), 'utf8'));
     const projectFile = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'projects.json'), 'utf8'));
+    const kiadbFile = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'kiadb.json'), 'utf8'));
 
     this.meta = projectFile.meta;
+    this.kiadbParks = kiadbFile.parks;
+    const documents = loadDocuments();
     this.builders = builderFile.builders;
     this.buildersById = new Map(this.builders.map((b) => [b.id, b]));
 
     this.projects = projectFile.projects.map((p) => {
       const builder = this.buildersById.get(p.builderId);
       if (!builder) throw new Error(`Project ${p.id} references unknown builder ${p.builderId}`);
+      const nearestKiadb = this.nearestPark(p);
       return {
         ...p,
+        nearestKiadb,
+        documents: documents.get(p.id) || [],
         builder: builder.name,
         builderShortName: builder.shortName,
         builderColor: builder.color,
         builderWebsite: builder.website,
         // Denormalised for cheap substring search.
-        searchBlob: [p.name, p.locality, p.corridor, p.zone, builder.name, p.propertyType, p.status, ...(p.configurations || [])]
+        searchBlob: [p.name, p.locality, p.corridor, p.zone, builder.name, p.propertyType, p.status,
+          nearestKiadb?.name, nearestKiadb?.sector, ...(p.configurations || [])]
           .join(' ')
           .toLowerCase(),
       };
@@ -40,6 +103,19 @@ class Store {
 
     this.loadedAt = new Date().toISOString();
     return this;
+  }
+
+  /** Closest KIADB industrial area, so a listing can be read against the
+   *  employment cluster it is actually selling proximity to. Null past the
+   *  catchment radius - a park 15 km away is not a selling point. */
+  nearestPark(p, maxKm = KIADB_CATCHMENT_KM) {
+    let best = null;
+    for (const park of this.kiadbParks) {
+      const km = haversineKm(p, park);
+      if (km > maxKm) continue;
+      if (!best || km < best.distanceKm) best = { ...park, distanceKm: Math.round(km * 10) / 10 };
+    }
+    return best;
   }
 
   getProject(id) {
@@ -65,6 +141,7 @@ class Store {
       if (f.types?.length && !f.types.includes(p.propertyType)) return false;
       if (f.statuses?.length && !f.statuses.includes(p.status)) return false;
       if (f.configurations?.length && !f.configurations.some((c) => p.configurations.includes(c))) return false;
+      if (f.kiadb?.length && !f.kiadb.includes(p.nearestKiadb?.id)) return false;
       // Price bands overlap-match: a 1.2-2.6 Cr project survives a "max 1.5 Cr" filter.
       if (f.minPriceCr != null && p.priceMaxCr < f.minPriceCr) return false;
       if (f.maxPriceCr != null && p.priceMinCr > f.maxPriceCr) return false;
@@ -98,6 +175,15 @@ class Store {
       propertyTypes: tally('propertyType'),
       statuses: tally('status'),
       configurations: tally('configurations'),
+      kiadbParks: this.kiadbParks
+        .map((park) => ({
+          value: park.id,
+          label: park.name.replace(/^KIADB (Industrial Area, )?/, ''),
+          sector: park.sector,
+          count: this.projects.filter((p) => p.nearestKiadb?.id === park.id).length,
+        }))
+        .filter((f) => f.count)
+        .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label)),
       priceCr: { min: Math.min(...prices), max: Math.max(...prices) },
       total: this.projects.length,
     };

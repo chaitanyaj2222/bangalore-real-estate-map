@@ -49,7 +49,7 @@ function readUrl() {
   searchText = qs.get('q') || '';
 
   const SETS = {
-    buy: [['builder', 'builder'], ['zone', 'zone'], ['type', 'type'], ['status', 'status'], ['config', 'config']],
+    buy: [['builder', 'builder'], ['zone', 'zone'], ['type', 'type'], ['status', 'status'], ['config', 'config'], ['kiadb', 'kiadb']],
     rent: [['bhk', 'bhk'], ['zone', 'zone'], ['type', 'type'], ['furnishing', 'furnishing']],
     dev: [['market', 'market']],
   };

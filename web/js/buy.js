@@ -6,7 +6,7 @@ import { map, markerLayer, fitTo, getUserLatLng, distanceChip } from './mapview.
 
 export const state = {
   builder: new Set(), zone: new Set(), type: new Set(), status: new Set(), config: new Set(),
-  maxPrice: null, sort: 'name',
+  kiadb: new Set(), maxPrice: null, sort: 'name',
 };
 
 let facets = null;
@@ -24,7 +24,7 @@ export async function loadFacets() {
 
 export function queryString(q) {
   const qs = new URLSearchParams();
-  for (const key of ['builder', 'zone', 'type', 'status', 'config']) {
+  for (const key of ['builder', 'zone', 'type', 'status', 'config', 'kiadb']) {
     if (state[key].size) qs.set(key, [...state[key]].join(','));
   }
   if (state.maxPrice != null) qs.set('maxPrice', state.maxPrice);
@@ -98,7 +98,8 @@ export function renderFilters(wrap, refresh) {
     group('Zone', facets.zones.map((z) => chip('zone', z.value, z.value, z.count, null, refresh))),
     group('Property type', facets.propertyTypes.map((t) => chip('type', t.value, t.value, t.count, null, refresh))),
     group('Status', facets.statuses.map((s) => chip('status', s.value, s.value, s.count, null, refresh))),
-    group('Configuration', facets.configurations.map((c) => chip('config', c.value, c.value, c.count, null, refresh)))
+    group('Configuration', facets.configurations.map((c) => chip('config', c.value, c.value, c.count, null, refresh))),
+    group('Near a KIADB area', facets.kiadbParks.map((k) => chip('kiadb', k.value, k.label, k.count, null, refresh)))
   );
 
   const ceiling = Math.ceil(facets.priceCr.max);
@@ -123,7 +124,7 @@ export function syncChips() {
 }
 
 export function resetFilters() {
-  for (const key of ['builder', 'zone', 'type', 'status', 'config']) state[key].clear();
+  for (const key of ['builder', 'zone', 'type', 'status', 'config', 'kiadb']) state[key].clear();
   state.maxPrice = null;
 }
 
@@ -152,6 +153,7 @@ export function renderResults(listEl, countEl, data) {
         el('span', { class: 'tag', text: p.propertyType }),
         el('span', { class: 'tag', text: p.status }),
         p.possession ? el('span', { class: 'tag', text: `Poss. ${p.possession}` }) : null,
+        p.nearestKiadb ? el('span', { class: 'tag kiadb', text: `KIADB ${p.nearestKiadb.distanceKm} km` }) : null,
         distanceChip(p.distanceKm))
     ));
   }
@@ -180,19 +182,77 @@ function renderDetail(p, body) {
       kv('Land area', p.landAcres ? `${p.landAcres} acres` : '—'),
       kv('Units', nfmt(p.totalUnits)),
       kv('Launched', p.launchYear || '—'),
-      kv('RERA', p.rera || 'Not recorded'))
+      kv('RERA', p.rera || 'Not recorded'),
+      p.pricePerSqft ? kv('Rate', `₹${nfmt(p.pricePerSqft)} / sq ft`) : null,
+      kv('Nearest KIADB area', p.nearestKiadb
+        ? `${p.nearestKiadb.locality} · ${p.nearestKiadb.distanceKm} km`
+        : 'None within 10 km'))
   );
 
   if (p.highlights?.length) {
     body.append(el('h4', { text: 'Highlights' }), el('ul', { class: 'bullets' }, p.highlights.map((h) => el('li', { text: h }))));
   }
 
+  if (p.plotMix?.length) {
+    body.append(el('h4', { text: 'Plot mix' }), el('table', { class: 'mini-table' },
+      el('tbody', {}, p.plotMix.map((m) => el('tr', {},
+        el('td', { text: m.label }),
+        el('td', { class: 'dim', text: m.metric }),
+        el('td', { class: 'num', text: m.count })))),
+      el('tfoot', {}, el('tr', {},
+        el('td', { text: 'Total sites' }),
+        el('td', {}),
+        el('td', { class: 'num', text: p.plotMix.reduce((n, m) => n + m.count, 0) })))));
+  }
+
+  if (p.landUse?.length) {
+    body.append(el('h4', { text: 'Land use' }), el('table', { class: 'mini-table' },
+      el('tbody', {}, p.landUse.map((u) => el('tr', {},
+        el('td', { text: u.use }),
+        el('td', { class: 'dim', text: `${nfmt(u.areaSqm)} sq m` }),
+        el('td', { class: 'num', text: `${u.pct}%` }))))));
+  }
+
+  if (p.documents?.length) {
+    const media = p.documents.filter((d) => d.type !== 'PDF');
+    const files = p.documents.filter((d) => d.type === 'PDF');
+
+    for (const m of media) {
+      body.append(el('h4', { text: m.type === 'Video' ? 'Walkthrough' : 'Gallery' }));
+      body.append(m.type === 'Video'
+        ? el('video', { class: 'doc-media', src: m.url, controls: true, preload: 'metadata', playsinline: true })
+        : el('img', { class: 'doc-media', src: m.url, alt: m.name, loading: 'lazy' }));
+    }
+
+    if (files.length) {
+      body.append(el('h4', { text: 'Documents' }), el('ul', { class: 'doclist' },
+        files.map((d) => el('li', {}, el('a', {
+          href: d.url, target: '_blank', rel: 'noopener',
+        }, d.name, el('span', { class: 'muted', text: ` · ${d.type}, ${d.size}` }))))));
+    }
+  }
+
+  if (p.approvals) {
+    const a = p.approvals;
+    body.append(el('h4', { text: 'Land and approvals' }), el('dl', { class: 'kv' },
+      a.village ? kv('Revenue village', a.village) : null,
+      a.surveyNos ? kv('Survey numbers', a.surveyNos.join(', ')) : null,
+      a.totalArea ? kv('Extent', a.totalArea) : null,
+      ...(a.conversionOrders || []).map((c) =>
+        kv(`Conversion, Sy. ${c.surveyNo}`, `Order ${c.order} dated ${c.date}`))));
+    if (a.layoutStatus) body.append(el('p', { class: 'note warn', text: a.layoutStatus }));
+    if (a.notes) body.append(el('p', { class: 'note', text: a.notes }));
+  }
+
   body.append(
     el('div', { class: 'actions' },
       el('a', { href: `https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}`, target: '_blank', rel: 'noopener', text: 'Open in Google Maps' }),
+      ...(p.links || []).map((l) => el('a', { href: l.url, target: '_blank', rel: 'noopener', text: l.label })),
       p.builderWebsite ? el('a', { href: p.builderWebsite, target: '_blank', rel: 'noopener', text: 'Builder site' }) : null,
       el('a', { href: `/api/projects/${p.id}`, target: '_blank', rel: 'noopener', text: 'View JSON' })),
-    el('p', { class: 'note', text: 'Location is a locality-level approximation and the price band is indicative, not a quote. Confirm RERA registration, pricing and possession with the developer.' })
+    el('p', { class: 'note', text: p.coordsApproximate
+      ? 'The map pin for this project is an estimate from its postal address, not a surveyed location. The price band is indicative, not a quote. Confirm RERA registration, pricing and possession with the developer.'
+      : 'Location is a locality-level approximation and the price band is indicative, not a quote. Confirm RERA registration, pricing and possession with the developer.' })
   );
 }
 

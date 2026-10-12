@@ -23,6 +23,70 @@
       "color": "#d97706",
       "website": "https://www.assetzproperty.com",
       "about": "Singapore-origin developer focused on Bengaluru, known for design-led mid-to-premium apartments in the east and north."
+    },
+    {
+      "id": "sobha",
+      "name": "Sobha Limited",
+      "shortName": "Sobha",
+      "color": "#0891b2",
+      "website": "https://www.sobha.com",
+      "about": "Backward-integrated luxury builder that runs its own concrete, joinery, glazing and interior divisions rather than subcontracting them."
+    },
+    {
+      "id": "puravankara",
+      "name": "Puravankara Limited",
+      "shortName": "Puravankara",
+      "color": "#be123c",
+      "website": "https://www.puravankara.com",
+      "about": "One of Bengaluru's oldest developers, running the premium Purva brand alongside the affordable Provident Housing arm."
+    },
+    {
+      "id": "brigade",
+      "name": "Brigade Enterprises",
+      "shortName": "Brigade",
+      "color": "#db2777",
+      "website": "https://www.brigadegroup.com",
+      "about": "Diversified Bengaluru developer spanning homes, offices, malls, hotels and schools, known for large mixed-use campuses."
+    },
+    {
+      "id": "sumadhura",
+      "name": "Sumadhura Group",
+      "shortName": "Sumadhura",
+      "color": "#7c3aed",
+      "website": "https://www.sumadhuragroup.com",
+      "about": "Premium residential developer concentrated on the Whitefield-Kannamangala corridor in east Bengaluru, also active in Hyderabad."
+    },
+    {
+      "id": "vajram",
+      "name": "Vajram Group",
+      "shortName": "Vajram",
+      "color": "#4d7c0f",
+      "website": "https://www.vajramgroup.com",
+      "about": "Bengaluru-focused developer working the northern corridor around Thanisandra, Jakkur and the airport road."
+    },
+    {
+      "id": "dsmax",
+      "name": "DS-MAX Properties",
+      "shortName": "DS-MAX",
+      "color": "#ea580c",
+      "website": "https://www.dsmaxproperties.com",
+      "about": "Bengaluru's highest-volume affordable housing developer, working almost entirely within the city's northern and western belts."
+    },
+    {
+      "id": "nischitha",
+      "name": "Nischitha Properties",
+      "shortName": "Nischitha",
+      "color": "#475569",
+      "website": "https://www.turiya.co/360/NischithaProperties/JaiDhama/",
+      "about": "Local Bengaluru North developer working plotted residential layouts in the Doddaballapura and Madhure belt."
+    },
+    {
+      "id": "birla",
+      "name": "Birla Estates",
+      "shortName": "Birla",
+      "color": "#7f1d1d",
+      "website": "https://www.birlaestates.com",
+      "about": "Real estate arm of Century Textiles, part of the Aditya Birla Group. Entered Bengaluru with large master-planned developments in the north."
     }
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "source": "Karnataka Industrial Areas Development Board industrial areas in and around Bengaluru.",
+    "note": "Coordinates mark the approximate centre of each notified area, not its boundary. Used to tag how close a residential project sits to an industrial employment cluster."
+  },
+  "parks": [
+    { "id": "aerospace-park", "name": "KIADB Aerospace Park", "locality": "Devanahalli", "sector": "Aerospace & defence", "lat": 13.218, "lng": 77.692 },
+    { "id": "hardware-park", "name": "KIADB Hardware Park", "locality": "Devanahalli", "sector": "Electronics & hardware", "lat": 13.248, "lng": 77.728 },
+    { "id": "doddaballapur", "name": "KIADB Apparel Park", "locality": "Doddaballapur", "sector": "Apparel & textiles", "lat": 13.295, "lng": 77.538 },
+    { "id": "dabaspete", "name": "KIADB Industrial Area, Dabaspete", "locality": "Dabaspete, NH-48", "sector": "General manufacturing", "lat": 13.226, "lng": 77.352 },
+    { "id": "peenya", "name": "KIADB Industrial Area, Peenya", "locality": "Peenya", "sector": "Engineering & machine tools", "lat": 13.029, "lng": 77.519 },
+    { "id": "epip-whitefield", "name": "KIADB EPIP Industrial Area", "locality": "Whitefield", "sector": "IT & electronics", "lat": 12.983, "lng": 77.75 },
+    { "id": "hoskote", "name": "KIADB Industrial Area, Hoskote", "locality": "Hoskote", "sector": "General manufacturing", "lat": 13.07, "lng": 77.8 },
+    { "id": "narasapura", "name": "KIADB Industrial Area, Narasapura", "locality": "Narasapura, Kolar", "sector": "Automobile", "lat": 13.118, "lng": 78.018 },
+    { "id": "bommasandra", "name": "KIADB Industrial Area, Bommasandra", "locality": "Bommasandra", "sector": "Pharma & engineering", "lat": 12.806, "lng": 77.686 },
+    { "id": "jigani", "name": "KIADB Industrial Area, Jigani", "locality": "Jigani, Anekal", "sector": "General manufacturing", "lat": 12.783, "lng": 77.636 },
+    { "id": "attibele", "name": "KIADB Industrial Area, Attibele", "locality": "Attibele", "sector": "Auto components", "lat": 12.777, "lng": 77.772 },
+    { "id": "harohalli", "name": "KIADB Industrial Area, Harohalli", "locality": "Harohalli, Kanakapura Road", "sector": "General manufacturing", "lat": 12.652, "lng": 77.468 },
+    { "id": "bidadi", "name": "KIADB Industrial Area, Bidadi", "locality": "Bidadi, Mysore Road", "sector": "Automobile", "lat": 12.798, "lng": 77.386 }
+  ]
+}

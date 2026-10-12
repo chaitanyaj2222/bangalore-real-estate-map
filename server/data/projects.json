@@ -1,7 +1,7 @@
 {
   "meta": {
     "city": "Bengaluru",
-    "lastUpdated": "2026-09-20",
+    "lastUpdated": "2026-10-12",
     "dataConfidence": "indicative",
     "disclaimer": "Compiled from publicly announced launches. Coordinates are locality-level approximations, and price/size bands are indicative rather than quoted. Verify RERA registration, pricing and possession with the developer before acting on anything here."
   },
@@ -1062,6 +1062,1075 @@
       "highlights": [
         "Eden Park, Avalon Park and Meridian Park phases",
         "Largest Prestige launch on the Sarjapur belt"
+      ]
+    },
+    {
+      "id": "sobha-dream-acres",
+      "name": "Sobha Dream Acres",
+      "builderId": "sobha",
+      "locality": "Balagere, Panathur",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 12.9433,
+      "lng": 77.7017,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.65,
+      "priceMaxCr": 1.35,
+      "sizeMinSqft": 645,
+      "sizeMaxSqft": 1300,
+      "landAcres": 81,
+      "totalUnits": 6000,
+      "launchYear": 2015,
+      "possession": "2025",
+      "highlights": [
+        "Large-format township off Varthur Road",
+        "Walking distance to the Panathur tech belt"
+      ]
+    },
+    {
+      "id": "sobha-city-thanisandra",
+      "name": "Sobha City",
+      "builderId": "sobha",
+      "locality": "Thanisandra",
+      "corridor": "North Bengaluru",
+      "zone": "North",
+      "lat": 13.0665,
+      "lng": 77.6255,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 1.4,
+      "priceMaxCr": 2.8,
+      "sizeMinSqft": 1100,
+      "sizeMaxSqft": 2200,
+      "landAcres": 34,
+      "totalUnits": 1900,
+      "launchYear": 2014,
+      "possession": "2025",
+      "highlights": [
+        "Gated community on Thanisandra Main Road",
+        "Clubhouse and central landscaped spine"
+      ]
+    },
+    {
+      "id": "sobha-neopolis",
+      "name": "Sobha Neopolis",
+      "builderId": "sobha",
+      "locality": "Panathur",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 12.9394,
+      "lng": 77.6961,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 1.6,
+      "priceMaxCr": 3.2,
+      "sizeMinSqft": 1150,
+      "sizeMaxSqft": 2300,
+      "landAcres": 26,
+      "totalUnits": 1800,
+      "launchYear": 2022,
+      "possession": "2027",
+      "highlights": [
+        "Greek-themed masterplan",
+        "Close to the Outer Ring Road tech corridor"
+      ]
+    },
+    {
+      "id": "sobha-royal-pavilion",
+      "name": "Sobha Royal Pavilion",
+      "builderId": "sobha",
+      "locality": "Sarjapur Road",
+      "corridor": "Sarjapur Road",
+      "zone": "South East",
+      "lat": 12.8895,
+      "lng": 77.7423,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.2,
+      "priceMaxCr": 2.4,
+      "sizeMinSqft": 1000,
+      "sizeMaxSqft": 1800,
+      "landAcres": 19,
+      "totalUnits": 1200,
+      "launchYear": 2019,
+      "possession": "2026",
+      "highlights": [
+        "Rajasthani-inspired architecture",
+        "On the Sarjapur growth corridor"
+      ]
+    },
+    {
+      "id": "sobha-silicon-oasis",
+      "name": "Sobha Silicon Oasis",
+      "builderId": "sobha",
+      "locality": "Hosa Road",
+      "corridor": "Hosur Road / Electronic City",
+      "zone": "South East",
+      "lat": 12.8757,
+      "lng": 77.6674,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.1,
+      "priceMaxCr": 2.0,
+      "sizeMinSqft": 1050,
+      "sizeMaxSqft": 1700,
+      "landAcres": 12,
+      "totalUnits": 900,
+      "launchYear": 2018,
+      "possession": "2025",
+      "highlights": [
+        "Between Hosa Road and Electronic City",
+        "Close to the Bommasandra industrial belt"
+      ]
+    },
+    {
+      "id": "sobha-windsor",
+      "name": "Sobha Windsor",
+      "builderId": "sobha",
+      "locality": "Whitefield",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 12.9698,
+      "lng": 77.7205,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.5,
+      "priceMaxCr": 2.6,
+      "sizeMinSqft": 1200,
+      "sizeMaxSqft": 1900,
+      "landAcres": 7,
+      "totalUnits": 500,
+      "launchYear": 2020,
+      "possession": "2026",
+      "highlights": [
+        "English-manor styling in central Whitefield",
+        "Short hop to the EPIP industrial area"
+      ]
+    },
+    {
+      "id": "sobha-victoria-park",
+      "name": "Sobha Victoria Park",
+      "builderId": "sobha",
+      "locality": "Yelahanka",
+      "corridor": "North Bengaluru",
+      "zone": "North",
+      "lat": 13.1005,
+      "lng": 77.5878,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.1,
+      "priceMaxCr": 2.1,
+      "sizeMinSqft": 1050,
+      "sizeMaxSqft": 1750,
+      "landAcres": 9,
+      "totalUnits": 700,
+      "launchYear": 2021,
+      "possession": "2026",
+      "highlights": [
+        "Yelahanka location with airport-road access",
+        "Low-density towers"
+      ]
+    },
+    {
+      "id": "sobha-sentosa",
+      "name": "Sobha Sentosa",
+      "builderId": "sobha",
+      "locality": "Panathur",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 12.9421,
+      "lng": 77.6989,
+      "propertyType": "Apartment",
+      "status": "New launch",
+      "configurations": [
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 2.0,
+      "priceMaxCr": 3.6,
+      "sizeMinSqft": 1500,
+      "sizeMaxSqft": 2500,
+      "landAcres": 6,
+      "totalUnits": 450,
+      "launchYear": 2023,
+      "possession": "2028",
+      "highlights": [
+        "Resort-themed amenity deck",
+        "Panathur Road frontage"
+      ]
+    },
+    {
+      "id": "purva-atmosphere",
+      "name": "Purva Atmosphere",
+      "builderId": "puravankara",
+      "locality": "Thanisandra",
+      "corridor": "North Bengaluru",
+      "zone": "North",
+      "lat": 13.0735,
+      "lng": 77.628,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.2,
+      "priceMaxCr": 2.2,
+      "sizeMinSqft": 1100,
+      "sizeMaxSqft": 1800,
+      "landAcres": 18,
+      "totalUnits": 1300,
+      "launchYear": 2019,
+      "possession": "2026",
+      "highlights": [
+        "Sky-deck amenities on Thanisandra Main Road",
+        "Close to Manyata Tech Park"
+      ]
+    },
+    {
+      "id": "purva-palm-beach",
+      "name": "Purva Palm Beach",
+      "builderId": "puravankara",
+      "locality": "Hennur Road",
+      "corridor": "Hennur / Bagalur",
+      "zone": "North East",
+      "lat": 13.0552,
+      "lng": 77.6412,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 1.8,
+      "priceMaxCr": 3.4,
+      "sizeMinSqft": 1500,
+      "sizeMaxSqft": 2600,
+      "landAcres": 12,
+      "totalUnits": 850,
+      "launchYear": 2017,
+      "possession": "2025",
+      "highlights": [
+        "Beach-themed lagoon clubhouse",
+        "Hennur Road corridor"
+      ]
+    },
+    {
+      "id": "purva-riviera",
+      "name": "Purva Riviera",
+      "builderId": "puravankara",
+      "locality": "Marathahalli",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 12.9569,
+      "lng": 77.7005,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.3,
+      "priceMaxCr": 2.3,
+      "sizeMinSqft": 1150,
+      "sizeMaxSqft": 1850,
+      "landAcres": 15,
+      "totalUnits": 1000,
+      "launchYear": 2018,
+      "possession": "2025",
+      "highlights": [
+        "Marathahalli location on the ORR tech belt"
+      ]
+    },
+    {
+      "id": "purva-skywood",
+      "name": "Purva Skywood",
+      "builderId": "puravankara",
+      "locality": "Sarjapur Road",
+      "corridor": "Sarjapur Road",
+      "zone": "South East",
+      "lat": 12.8988,
+      "lng": 77.7189,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.2,
+      "priceMaxCr": 2.2,
+      "sizeMinSqft": 1100,
+      "sizeMaxSqft": 1800,
+      "landAcres": 14,
+      "totalUnits": 900,
+      "launchYear": 2019,
+      "possession": "2026",
+      "highlights": [
+        "Off Sarjapur Road near Dommasandra"
+      ]
+    },
+    {
+      "id": "purva-zenium",
+      "name": "Purva Zenium",
+      "builderId": "puravankara",
+      "locality": "Hosahalli, Bagalur Road",
+      "corridor": "Hennur / Bagalur",
+      "zone": "North",
+      "lat": 13.112,
+      "lng": 77.632,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.0,
+      "priceMaxCr": 1.9,
+      "sizeMinSqft": 1000,
+      "sizeMaxSqft": 1650,
+      "landAcres": 11,
+      "totalUnits": 800,
+      "launchYear": 2021,
+      "possession": "2027",
+      "highlights": [
+        "On the Bagalur road to the airport",
+        "Near the Aerospace Park employment belt"
+      ]
+    },
+    {
+      "id": "provident-park-square",
+      "name": "Provident Park Square",
+      "builderId": "puravankara",
+      "locality": "Judicial Layout, Kanakapura Road",
+      "corridor": "Kanakapura Road",
+      "zone": "South West",
+      "lat": 12.8783,
+      "lng": 77.545,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.55,
+      "priceMaxCr": 1.15,
+      "sizeMinSqft": 610,
+      "sizeMaxSqft": 1250,
+      "landAcres": 18,
+      "totalUnits": 1400,
+      "launchYear": 2020,
+      "possession": "2026",
+      "highlights": [
+        "Affordable Provident-brand community",
+        "Metro access on Kanakapura Road"
+      ]
+    },
+    {
+      "id": "provident-sunworth-city",
+      "name": "Provident Sunworth City",
+      "builderId": "puravankara",
+      "locality": "Mysore Road",
+      "corridor": "Mysore Road",
+      "zone": "West",
+      "lat": 12.9088,
+      "lng": 77.4622,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.45,
+      "priceMaxCr": 0.95,
+      "sizeMinSqft": 570,
+      "sizeMaxSqft": 1150,
+      "landAcres": 57,
+      "totalUnits": 3000,
+      "launchYear": 2016,
+      "possession": "2025",
+      "highlights": [
+        "Large affordable township on Mysore Road",
+        "Close to the Bidadi industrial belt"
+      ]
+    },
+    {
+      "id": "brigade-orchards",
+      "name": "Brigade Orchards",
+      "builderId": "brigade",
+      "locality": "Devanahalli",
+      "corridor": "Airport / NH-44",
+      "zone": "North",
+      "lat": 13.2455,
+      "lng": 77.7145,
+      "propertyType": "Township",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 0.75,
+      "priceMaxCr": 3.2,
+      "sizeMinSqft": 700,
+      "sizeMaxSqft": 2600,
+      "landAcres": 130,
+      "totalUnits": 4500,
+      "launchYear": 2014,
+      "possession": "2027",
+      "highlights": [
+        "Integrated township beside the Aerospace Park",
+        "School, sports arena and office block on site"
+      ]
+    },
+    {
+      "id": "brigade-el-dorado",
+      "name": "Brigade El Dorado",
+      "builderId": "brigade",
+      "locality": "Huvinayakanahalli, Bagalur",
+      "corridor": "Airport / Bagalur",
+      "zone": "North",
+      "lat": 13.1523,
+      "lng": 77.6688,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.55,
+      "priceMaxCr": 1.35,
+      "sizeMinSqft": 620,
+      "sizeMaxSqft": 1300,
+      "landAcres": 50,
+      "totalUnits": 3800,
+      "launchYear": 2018,
+      "possession": "2026",
+      "highlights": [
+        "Value-priced towers on the Bagalur road",
+        "Positioned for airport and Aerospace Park commuters"
+      ]
+    },
+    {
+      "id": "brigade-cornerstone-utopia",
+      "name": "Brigade Cornerstone Utopia",
+      "builderId": "brigade",
+      "locality": "Varthur",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 12.9401,
+      "lng": 77.7382,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.85,
+      "priceMaxCr": 2.1,
+      "sizeMinSqft": 750,
+      "sizeMaxSqft": 1700,
+      "landAcres": 47,
+      "totalUnits": 3500,
+      "launchYear": 2019,
+      "possession": "2026",
+      "highlights": [
+        "Large mixed-use campus at Varthur",
+        "Co-working and retail within the development"
+      ]
+    },
+    {
+      "id": "brigade-meadows",
+      "name": "Brigade Meadows",
+      "builderId": "brigade",
+      "locality": "Kanakapura Road",
+      "corridor": "Kanakapura Road",
+      "zone": "South West",
+      "lat": 12.848,
+      "lng": 77.5285,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.5,
+      "priceMaxCr": 1.4,
+      "sizeMinSqft": 600,
+      "sizeMaxSqft": 1350,
+      "landAcres": 60,
+      "totalUnits": 2500,
+      "launchYear": 2015,
+      "possession": "2025",
+      "highlights": [
+        "Township on Kanakapura Road",
+        "School and retail plaza on site"
+      ]
+    },
+    {
+      "id": "brigade-calista",
+      "name": "Brigade Calista",
+      "builderId": "brigade",
+      "locality": "Budigere Cross",
+      "corridor": "Old Madras Road",
+      "zone": "East",
+      "lat": 13.0192,
+      "lng": 77.7566,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.9,
+      "priceMaxCr": 1.7,
+      "sizeMinSqft": 950,
+      "sizeMaxSqft": 1500,
+      "landAcres": 15,
+      "totalUnits": 1100,
+      "launchYear": 2021,
+      "possession": "2026",
+      "highlights": [
+        "Budigere Cross on Old Madras Road",
+        "Near the Hoskote industrial belt"
+      ]
+    },
+    {
+      "id": "brigade-woods",
+      "name": "Brigade Woods",
+      "builderId": "brigade",
+      "locality": "Whitefield",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 12.9762,
+      "lng": 77.7284,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.4,
+      "priceMaxCr": 2.5,
+      "sizeMinSqft": 1200,
+      "sizeMaxSqft": 1900,
+      "landAcres": 5,
+      "totalUnits": 350,
+      "launchYear": 2020,
+      "possession": "2025",
+      "highlights": [
+        "Compact low-rise scheme in Whitefield",
+        "Adjacent to the EPIP industrial area"
+      ]
+    },
+    {
+      "id": "brigade-exotica",
+      "name": "Brigade Exotica",
+      "builderId": "brigade",
+      "locality": "Old Madras Road",
+      "corridor": "Old Madras Road",
+      "zone": "East",
+      "lat": 13.0122,
+      "lng": 77.7128,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 2.2,
+      "priceMaxCr": 4.5,
+      "sizeMinSqft": 1900,
+      "sizeMaxSqft": 3200,
+      "landAcres": 10,
+      "totalUnits": 500,
+      "launchYear": 2016,
+      "possession": "2025",
+      "highlights": [
+        "High-rise towers on Old Madras Road",
+        "Large-format premium units"
+      ]
+    },
+    {
+      "id": "brigade-komarla-heights",
+      "name": "Brigade Komarla Heights",
+      "builderId": "brigade",
+      "locality": "Padmanabhanagar",
+      "corridor": "South Bengaluru",
+      "zone": "South",
+      "lat": 12.9105,
+      "lng": 77.558,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.1,
+      "priceMaxCr": 2.0,
+      "sizeMinSqft": 1000,
+      "sizeMaxSqft": 1650,
+      "landAcres": 4,
+      "totalUnits": 300,
+      "launchYear": 2021,
+      "possession": "2026",
+      "highlights": [
+        "Established south Bengaluru neighbourhood",
+        "Close to Outer Ring Road south"
+      ]
+    },
+    {
+      "id": "sumadhura-folium",
+      "name": "Sumadhura Folium",
+      "builderId": "sumadhura",
+      "locality": "Whitefield",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 12.9877,
+      "lng": 77.7515,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 1.8,
+      "priceMaxCr": 3.4,
+      "sizeMinSqft": 1500,
+      "sizeMaxSqft": 2400,
+      "landAcres": 12,
+      "totalUnits": 850,
+      "launchYear": 2021,
+      "possession": "2026",
+      "highlights": [
+        "Premium towers in central Whitefield",
+        "Beside the EPIP industrial area"
+      ]
+    },
+    {
+      "id": "sumadhura-eden-garden",
+      "name": "Sumadhura Eden Garden",
+      "builderId": "sumadhura",
+      "locality": "Kannamangala, Whitefield",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 13.0023,
+      "lng": 77.7601,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.2,
+      "priceMaxCr": 2.2,
+      "sizeMinSqft": 1100,
+      "sizeMaxSqft": 1800,
+      "landAcres": 9,
+      "totalUnits": 650,
+      "launchYear": 2020,
+      "possession": "2025",
+      "highlights": [
+        "On the Whitefield-Kannamangala corridor"
+      ]
+    },
+    {
+      "id": "sumadhura-capitol-residences",
+      "name": "Sumadhura Capitol Residences",
+      "builderId": "sumadhura",
+      "locality": "Kannamangala, Whitefield",
+      "corridor": "Whitefield",
+      "zone": "East",
+      "lat": 13.0051,
+      "lng": 77.7638,
+      "propertyType": "Apartment",
+      "status": "New launch",
+      "configurations": [
+        "3 BHK",
+        "4 BHK"
+      ],
+      "priceMinCr": 2.0,
+      "priceMaxCr": 3.8,
+      "sizeMinSqft": 1600,
+      "sizeMaxSqft": 2700,
+      "landAcres": 14,
+      "totalUnits": 900,
+      "launchYear": 2024,
+      "possession": "2029",
+      "highlights": [
+        "Part of the group's Whitefield-Kannamangala expansion",
+        "Branded clubhouse and large-format units"
+      ]
+    },
+    {
+      "id": "vajram-newtown",
+      "name": "Vajram Newtown",
+      "builderId": "vajram",
+      "locality": "Thanisandra",
+      "corridor": "North Bengaluru",
+      "zone": "North",
+      "lat": 13.0762,
+      "lng": 77.6297,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.0,
+      "priceMaxCr": 1.9,
+      "sizeMinSqft": 1000,
+      "sizeMaxSqft": 1650,
+      "landAcres": 6,
+      "totalUnits": 450,
+      "launchYear": 2019,
+      "possession": "2025",
+      "highlights": [
+        "Thanisandra location near Manyata Tech Park"
+      ]
+    },
+    {
+      "id": "vajram-tiara",
+      "name": "Vajram Tiara",
+      "builderId": "vajram",
+      "locality": "Jakkur",
+      "corridor": "North Bengaluru",
+      "zone": "North",
+      "lat": 13.0836,
+      "lng": 77.5981,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.1,
+      "priceMaxCr": 2.0,
+      "sizeMinSqft": 1050,
+      "sizeMaxSqft": 1700,
+      "landAcres": 5,
+      "totalUnits": 380,
+      "launchYear": 2020,
+      "possession": "2026",
+      "highlights": [
+        "Jakkur location with airport-road access"
+      ]
+    },
+    {
+      "id": "vajram-esteva",
+      "name": "Vajram Esteva",
+      "builderId": "vajram",
+      "locality": "Hennur Road",
+      "corridor": "Hennur / Bagalur",
+      "zone": "North East",
+      "lat": 13.0625,
+      "lng": 77.6455,
+      "propertyType": "Apartment",
+      "status": "New launch",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 1.0,
+      "priceMaxCr": 1.8,
+      "sizeMinSqft": 980,
+      "sizeMaxSqft": 1600,
+      "landAcres": 4,
+      "totalUnits": 300,
+      "launchYear": 2023,
+      "possession": "2028",
+      "highlights": [
+        "Hennur Road corridor toward Bagalur"
+      ]
+    },
+    {
+      "id": "dsmax-sunrise",
+      "name": "DS-MAX Sunrise",
+      "builderId": "dsmax",
+      "locality": "Jalahalli",
+      "corridor": "North Bengaluru",
+      "zone": "North",
+      "lat": 13.0405,
+      "lng": 77.5195,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.5,
+      "priceMaxCr": 0.95,
+      "sizeMinSqft": 850,
+      "sizeMaxSqft": 1350,
+      "landAcres": 3,
+      "totalUnits": 280,
+      "launchYear": 2021,
+      "possession": "2025",
+      "highlights": [
+        "Affordable pricing near the Peenya industrial belt"
+      ]
+    },
+    {
+      "id": "dsmax-signature",
+      "name": "DS-MAX Signature",
+      "builderId": "dsmax",
+      "locality": "Chikkabanavara",
+      "corridor": "North Bengaluru",
+      "zone": "North",
+      "lat": 13.0725,
+      "lng": 77.5065,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.45,
+      "priceMaxCr": 0.9,
+      "sizeMinSqft": 820,
+      "sizeMaxSqft": 1300,
+      "landAcres": 3,
+      "totalUnits": 250,
+      "launchYear": 2022,
+      "possession": "2026",
+      "highlights": [
+        "North-west Bengaluru, near the Chikkabanavara rail halt"
+      ]
+    },
+    {
+      "id": "dsmax-sportivo",
+      "name": "DS-MAX Sportivo",
+      "builderId": "dsmax",
+      "locality": "Kogilu, Yelahanka",
+      "corridor": "North Bengaluru",
+      "zone": "North",
+      "lat": 13.0895,
+      "lng": 77.6045,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.55,
+      "priceMaxCr": 1.05,
+      "sizeMinSqft": 900,
+      "sizeMaxSqft": 1400,
+      "landAcres": 4,
+      "totalUnits": 320,
+      "launchYear": 2021,
+      "possession": "2025",
+      "highlights": [
+        "Kogilu Cross, on the road to the airport"
+      ]
+    },
+    {
+      "id": "dsmax-splendour",
+      "name": "DS-MAX Splendour",
+      "builderId": "dsmax",
+      "locality": "Hennur Road",
+      "corridor": "Hennur / Bagalur",
+      "zone": "North East",
+      "lat": 13.0688,
+      "lng": 77.6392,
+      "propertyType": "Apartment",
+      "status": "New launch",
+      "configurations": [
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.6,
+      "priceMaxCr": 1.1,
+      "sizeMinSqft": 900,
+      "sizeMaxSqft": 1420,
+      "landAcres": 2,
+      "totalUnits": 200,
+      "launchYear": 2023,
+      "possession": "2027",
+      "highlights": [
+        "Entry-priced units on the Hennur corridor"
+      ]
+    },
+    {
+      "id": "nischitha-jai-dhama",
+      "name": "Nischitha Jai Dhama",
+      "builderId": "nischitha",
+      "locality": "Marasandra Village, Chikka Madhure",
+      "corridor": "Doddaballapura / Madhure",
+      "zone": "North",
+      "lat": 13.227,
+      "lng": 77.476,
+      "coordsApproximate": true,
+      "propertyType": "Plotted",
+      "status": "New launch",
+      "configurations": [
+        "Plots"
+      ],
+      "priceMinCr": 0.46,
+      "priceMaxCr": 1.12,
+      "pricePerSqft": 3800,
+      "sizeMinSqft": 1200,
+      "sizeMaxSqft": 2952,
+      "landAcres": 5.33,
+      "totalUnits": 84,
+      "launchYear": 2026,
+      "possession": null,
+      "highlights": [
+        "84-site plotted layout, 200 m off the Doddaballapura highway",
+        "30 ft and 60 ft CC roads, water and power connectivity",
+        "Near the Madhure Shani Mahatma temple and the proposed IRR ring road"
+      ],
+      "plotMix": [
+        {
+          "label": "30 x 40 ft",
+          "metric": "9.14 m x 12.19 m",
+          "count": 30
+        },
+        {
+          "label": "30 x 50 ft",
+          "metric": "9.14 m x 15.24 m",
+          "count": 42
+        },
+        {
+          "label": "Odd-size sites",
+          "metric": "147 - 274 sq m",
+          "count": 10
+        },
+        {
+          "label": "Commercial",
+          "metric": "318 / 319 sq m",
+          "count": 2
+        }
+      ],
+      "landUse": [
+        {
+          "use": "Residential",
+          "areaSqm": 11153.3,
+          "pct": 51.76
+        },
+        {
+          "use": "Commercial",
+          "areaSqm": 637.71,
+          "pct": 2.96
+        },
+        {
+          "use": "Park & open space",
+          "areaSqm": 2156.4,
+          "pct": 10.01
+        },
+        {
+          "use": "Civic amenity",
+          "areaSqm": 1080.16,
+          "pct": 5.01
+        },
+        {
+          "use": "Roads",
+          "areaSqm": 6521.64,
+          "pct": 30.26
+        }
+      ],
+      "approvals": {
+        "village": "Marasandra, Madure Hobli, Doddaballapura Taluk, Bangalore Rural",
+        "surveyNos": [
+          "87/1",
+          "87/6"
+        ],
+        "totalArea": "5 acres 13 guntas (21,549.21 sq m)",
+        "conversionOrders": [
+          {
+            "surveyNo": "87/1",
+            "order": "812503",
+            "date": "2025-12-10"
+          },
+          {
+            "surveyNo": "87/6",
+            "order": "818165",
+            "date": "2025-12-31"
+          }
+        ],
+        "layoutStatus": "Draft layout plan dated 05-02-2026. The sanction authority block on the drawing is blank, so the layout was not yet sanctioned when the plan was issued. Confirm the sanctioned plan and K-RERA registration before paying any advance.",
+        "notes": "A 66 kV HT line crosses the southern edge of the layout. Plot 87/1 carries 12 guntas of kharab land."
+      },
+      "links": [
+        {
+          "label": "360 walkthrough",
+          "url": "https://www.turiya.co/360/NischithaProperties/JaiDhama/"
+        },
+        {
+          "label": "Project reel",
+          "url": "https://www.instagram.com/reel/DbvX0G7TyvE/"
+        },
+        {
+          "label": "Developer map pin",
+          "url": "https://maps.app.goo.gl/auneFsKcimXxoxWT6"
+        }
+      ]
+    },
+    {
+      "id": "birla-trimaya",
+      "name": "Birla Trimaya",
+      "builderId": "birla",
+      "locality": "Shettigere, Devanahalli",
+      "corridor": "Airport / NH-44",
+      "zone": "North",
+      "lat": 13.2135,
+      "lng": 77.6495,
+      "propertyType": "Apartment",
+      "status": "Under construction",
+      "configurations": [
+        "1 BHK",
+        "2 BHK",
+        "3 BHK"
+      ],
+      "priceMinCr": 0.6,
+      "priceMaxCr": 1.9,
+      "sizeMinSqft": 650,
+      "sizeMaxSqft": 1750,
+      "landAcres": 52,
+      "totalUnits": 3000,
+      "launchYear": 2023,
+      "possession": "2028",
+      "highlights": [
+        "Master-planned township launched in phases at Devanahalli",
+        "Minutes from the KIADB Aerospace Park employment belt",
+        "Birla Estates' first large Bengaluru development"
       ]
     }
   ]
