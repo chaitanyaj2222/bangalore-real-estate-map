@@ -269,8 +269,7 @@ function renderDetail(p, body) {
     el('div', { class: 'actions' },
       el('a', { href: `https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}`, target: '_blank', rel: 'noopener', text: 'Open in Google Maps' }),
       ...(p.links || []).map((l) => el('a', { href: l.url, target: '_blank', rel: 'noopener', text: l.label })),
-      p.builderWebsite ? el('a', { href: p.builderWebsite, target: '_blank', rel: 'noopener', text: 'Builder site' }) : null,
-      el('a', { href: `/api/projects/${p.id}`, target: '_blank', rel: 'noopener', text: 'View JSON' })),
+      p.builderWebsite ? el('a', { href: p.builderWebsite, target: '_blank', rel: 'noopener', text: 'Builder site' }) : null),
     el('p', { class: 'note', text: p.coordsApproximate
       ? 'The map pin for this project is an estimate from its postal address, not a surveyed location. The price band is indicative, not a quote. Confirm RERA registration, pricing and possession with the developer.'
       : 'Location is a locality-level approximation and the price band is indicative, not a quote. Confirm RERA registration, pricing and possession with the developer.' })

@@ -140,8 +140,7 @@ function renderProfile(d, pane) {
     el('h2', { text: d.name }),
     el('p', { class: 'dev-sub', text: `Founded ${d.founded} · Headquartered in ${d.hq}` }),
     el('div', { class: 'dev-links' },
-      el('a', { href: d.website, target: '_blank', rel: 'noopener', text: 'Official site' }),
-      el('a', { href: `/api/developers/${d.id}`, target: '_blank', rel: 'noopener', text: 'View JSON' }))));
+      el('a', { href: d.website, target: '_blank', rel: 'noopener', text: 'Official site' }))));
 
   pane.append(el('section', { class: 'dev-stats' },
     d.stats.map((s) => el('div', { class: 'dev-stat' },

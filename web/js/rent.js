@@ -279,8 +279,7 @@ function renderDetail(r, body) {
     el('h4', { text: 'Amenities' }),
     el('div', { class: 'amenities' }, r.amenities.map((a) => el('span', { class: 'tag', text: a }))),
     el('div', { class: 'actions' },
-      el('a', { href: `https://www.google.com/maps/search/?api=1&query=${r.lat},${r.lng}`, target: '_blank', rel: 'noopener', text: 'Open in Google Maps' }),
-      el('a', { href: `/api/rentals/${r.id}`, target: '_blank', rel: 'noopener', text: 'View JSON' })),
+      el('a', { href: `https://www.google.com/maps/search/?api=1&query=${r.lat},${r.lng}`, target: '_blank', rel: 'noopener', text: 'Open in Google Maps' })),
     el('p', { class: 'note warn', text: 'Sample listing. This home, its rent, availability and photos are demo data generated for this project - it is not real inventory. Do not contact anyone or transfer money based on it.' })
   );
 }
