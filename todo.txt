@@ -1,17 +1,25 @@
 1. for every project, the website should also tell, what I think about the project
-2. remove json button
 3. can I add a image to every property?
 4. work as a market place for new property buyers who bought during pre launch or new launch
    and would like to sell without occupying
 6. use the logo of the builders on the dots shown on the map
 7. when a property is selected, it should blink on the map
 8. buy bangalorerealestatemap & indianrealestatemap websites on namecheap - they cost 1100 rupees
+9. in the website, assure that all listed properties for buy or rent are vetted and are from direct sellers
+    - allow no postings from brokers on the website - 100% borker free
+10. build a strategy to attract rental postings
+12. make this mobile friendly for both mobile phones and tablets
+
 
 
 
 
 done
 5. when a filter is selected, the count of remaining filters should decrease in count
+2. remove json button
+11. show the builders list only in the faucets and remove it from the top of the map
+
+
 
 
 

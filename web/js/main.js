@@ -145,14 +145,12 @@ function renderLegend() {
   const roads = getRoadList();
   const rings = roads.filter((r) => r.category === 'ring');
 
-  wrap.append(el('div', { class: 'legend-title', text: mode === 'buy' ? 'Builders' : 'Rentals' }));
-
   if (mode === 'buy') {
-    for (const b of buyFacets.builders) {
-      wrap.append(el('div', { class: 'row' }, el('span', { class: 'dot', style: `background:${b.color}` }), `${b.shortName} (${b.count})`));
-    }
+    wrap.append(el('div', { class: 'legend-title', text: 'Pins' }));
+    wrap.append(el('div', { class: 'row muted', text: 'Colour = builder (see filters)' }));
     wrap.append(el('div', { class: 'row muted', text: 'Pin size ≈ unit count' }));
   } else {
+    wrap.append(el('div', { class: 'legend-title', text: 'Rentals' }));
     wrap.append(el('div', { class: 'row' }, el('span', { class: 'pill-key' }, '₹45K'), 'Monthly rent'));
     wrap.append(el('div', { class: 'row muted', text: 'Sample listings, not real inventory' }));
   }
