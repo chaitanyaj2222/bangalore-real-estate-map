@@ -7,11 +7,11 @@ async function getJSON(url) {
 }
 
 export const getProjects = (qs) => getJSON(`/api/projects?${qs}`);
-export const getProjectFacets = () => getJSON('/api/facets');
+export const getProjectFacets = (qs) => getJSON(`/api/facets${qs ? `?${qs}` : ''}`);
 export const getStats = () => getJSON('/api/stats');
 
 export const getRentals = (qs) => getJSON(`/api/rentals?${qs}`);
-export const getRentalFacets = () => getJSON('/api/rentals/facets');
+export const getRentalFacets = (qs) => getJSON(`/api/rentals/facets${qs ? `?${qs}` : ''}`);
 
 export const getRoads = () => getJSON('/api/roads');
 

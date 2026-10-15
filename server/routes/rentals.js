@@ -59,7 +59,7 @@ router.get('/rentals.geojson', (req, res) => {
 });
 
 router.get('/rentals/facets', (req, res) => {
-  res.json(rentalStore.facets());
+  res.json(rentalStore.facets(filtersFrom(req.query)));
 });
 
 router.get('/rentals/:id', (req, res) => {

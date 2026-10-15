@@ -151,43 +151,64 @@ class Store {
   }
 
   /** Distinct values plus counts, for building filter controls on the client. */
-  facets() {
-    const tally = (key) => {
+  /**
+   * Counts are contextual: each dimension is tallied over the results of every
+   * OTHER active filter, ignoring its own. So picking a builder narrows the zone
+   * counts, while the builder counts still show what each alternative would give.
+   * Values that exist globally are kept at count 0 rather than vanishing.
+   */
+  facets(filters = {}) {
+    const subsetFor = (ownKey) => {
+      const f = { ...filters };
+      delete f[ownKey];
+      return this.query(f);
+    };
+
+    const valuesOf = (p, field) => (Array.isArray(p[field]) ? p[field] : [p[field]]);
+
+    const dimension = (field, ownKey) => {
       const counts = new Map();
-      for (const p of this.projects) {
-        const values = Array.isArray(p[key]) ? p[key] : [p[key]];
-        for (const v of values) counts.set(v, (counts.get(v) || 0) + 1);
+      for (const p of subsetFor(ownKey)) {
+        for (const v of valuesOf(p, field)) if (v != null) counts.set(v, (counts.get(v) || 0) + 1);
       }
-      return [...counts.entries()]
-        .map(([value, count]) => ({ value, count }))
+      const all = new Set();
+      for (const p of this.projects) for (const v of valuesOf(p, field)) if (v != null) all.add(v);
+      return [...all]
+        .map((value) => ({ value, count: counts.get(value) || 0 }))
         .sort((a, b) => b.count - a.count || String(a.value).localeCompare(String(b.value)));
     };
 
+    const builderRows = subsetFor('builders');
+    const kiadbRows = subsetFor('kiadb');
+
+    // Price bounds stay global so the budget slider's range does not jump around.
     const prices = this.projects.flatMap((p) => [p.priceMinCr, p.priceMaxCr]).filter((n) => typeof n === 'number');
 
     return {
       builders: this.builders.map((b) => ({
         ...b,
-        count: this.projects.filter((p) => p.builderId === b.id).length,
+        count: builderRows.filter((p) => p.builderId === b.id).length,
       })),
-      zones: tally('zone'),
-      corridors: tally('corridor'),
-      propertyTypes: tally('propertyType'),
-      statuses: tally('status'),
-      configurations: tally('configurations'),
+      zones: dimension('zone', 'zones'),
+      corridors: dimension('corridor', null),
+      propertyTypes: dimension('propertyType', 'types'),
+      statuses: dimension('status', 'statuses'),
+      configurations: dimension('configurations', 'configurations'),
       kiadbParks: this.kiadbParks
+        .filter((park) => this.projects.some((p) => p.nearestKiadb?.id === park.id))
         .map((park) => ({
           value: park.id,
           label: park.name.replace(/^KIADB (Industrial Area, )?/, ''),
           sector: park.sector,
-          count: this.projects.filter((p) => p.nearestKiadb?.id === park.id).length,
+          count: kiadbRows.filter((p) => p.nearestKiadb?.id === park.id).length,
         }))
-        .filter((f) => f.count)
         .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label)),
       priceCr: { min: Math.min(...prices), max: Math.max(...prices) },
       total: this.projects.length,
+      matching: this.query(filters).length,
     };
   }
+
 
   stats() {
     const byBuilder = this.builders.map((b) => {

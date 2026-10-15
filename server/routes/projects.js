@@ -72,7 +72,7 @@ router.get('/builders', (req, res) => {
 });
 
 router.get('/facets', (req, res) => {
-  res.json(store.facets());
+  res.json(store.facets(filtersFrom(req.query)));
 });
 
 router.get('/stats', (req, res) => {

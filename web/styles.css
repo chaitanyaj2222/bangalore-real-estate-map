@@ -780,3 +780,6 @@ body.mode-dev .map-wrap { display: none; }
   border: 1px solid var(--border);
   margin-bottom: 4px;
 }
+
+.chip.is-empty { opacity: .4; }
+.chip.is-empty:hover { opacity: 1; }

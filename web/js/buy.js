@@ -116,10 +116,31 @@ export function renderFilters(wrap, refresh) {
   wrap.append(el('div', { class: 'fgroup' }, el('h3', { text: 'Budget' }), el('div', { class: 'price-row' }, slider, out)));
 }
 
+const COUNT_SOURCES = {
+  builder: (f) => f.builders.map((b) => [b.id, b.count]),
+  zone: (f) => f.zones.map((z) => [z.value, z.count]),
+  type: (f) => f.propertyTypes.map((t) => [t.value, t.count]),
+  status: (f) => f.statuses.map((s) => [s.value, s.count]),
+  config: (f) => f.configurations.map((c) => [c.value, c.count]),
+  kiadb: (f) => f.kiadbParks.map((k) => [k.value, k.count]),
+};
+
 export function syncChips() {
+  const counts = {};
+  for (const [key, read] of Object.entries(COUNT_SOURCES)) counts[key] = new Map(read(facets));
+
   for (const node of document.querySelectorAll('.chip[data-key]')) {
-    const set = state[node.dataset.key];
-    if (set) node.setAttribute('aria-pressed', String(set.has(node.dataset.value)));
+    const key = node.dataset.key;
+    const set = state[key];
+    const selected = !!set?.has(node.dataset.value);
+    if (set) node.setAttribute('aria-pressed', String(selected));
+
+    const n = counts[key]?.get(node.dataset.value);
+    if (n == null) continue;
+    const badge = node.querySelector('.n');
+    if (badge) badge.textContent = n;
+    // Dim options that would return nothing, but leave them clickable.
+    node.classList.toggle('is-empty', n === 0 && !selected);
   }
 }
 
@@ -280,7 +301,9 @@ export function clearSelection() {
 /* ---------- refresh ---------- */
 
 export async function refresh({ q, listEl, countEl, refit = true }) {
-  const data = await getProjects(queryString(q));
+  const qs = queryString(q);
+  const [data, nextFacets] = await Promise.all([getProjects(qs), getProjectFacets(qs)]);
+  facets = nextFacets;
   rows = withDistance(data.projects);
   renderResults(listEl, countEl, data);
   buildMarkers();

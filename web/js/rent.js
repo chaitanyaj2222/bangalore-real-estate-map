@@ -137,15 +137,41 @@ export function renderFilters(wrap, refresh) {
   );
 }
 
+const COUNT_SOURCES = {
+  bhk: (f) => f.bhk.map((b) => [b.value, b.count]),
+  zone: (f) => f.zones.map((z) => [z.value, z.count]),
+  type: (f) => f.propertyTypes.map((t) => [t.value, t.count]),
+  furnishing: (f) => f.furnishing.map((x) => [x.value, x.count]),
+};
+
 export function syncChips() {
+  const counts = {};
+  for (const [key, read] of Object.entries(COUNT_SOURCES)) counts[key] = new Map(read(facets));
+
   for (const node of document.querySelectorAll('.chip[data-rkey]')) {
-    const set = state[node.dataset.rkey];
+    const key = node.dataset.rkey;
+    const set = state[key];
     if (!set) continue;
+
     const raw = node.dataset.value;
     const value = node.dataset.rkey === 'bhk' ? Number(raw) : raw;
     node.setAttribute('aria-pressed', String(set.has(value)));
+
+    const n = counts[key]?.get(value);
+    if (n != null) {
+      const badge = node.querySelector('.n');
+      if (badge) badge.textContent = n;
+      node.classList.toggle('is-empty', n === 0 && !set.has(value));
+    }
   }
-  document.querySelector('.chip[data-pets]')?.setAttribute('aria-pressed', String(state.pets));
+
+  const petsNode = document.querySelector('.chip[data-pets]');
+  if (petsNode) {
+    petsNode.setAttribute('aria-pressed', String(state.pets));
+    const badge = petsNode.querySelector('.n');
+    if (badge) badge.textContent = facets.petsAllowed;
+    petsNode.classList.toggle('is-empty', facets.petsAllowed === 0 && !state.pets);
+  }
 }
 
 export function resetFilters() {
@@ -281,7 +307,9 @@ export function clearSelection() {
 }
 
 export async function refresh({ q, listEl, countEl, refit = true }) {
-  const data = await getRentals(queryString(q));
+  const qs = queryString(q);
+  const [data, nextFacets] = await Promise.all([getRentals(qs), getRentalFacets(qs)]);
+  facets = nextFacets;
   rows = withDistance(data.rentals);
   renderResults(listEl, countEl, data);
   buildMarkers();

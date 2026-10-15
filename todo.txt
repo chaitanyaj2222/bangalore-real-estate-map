@@ -1,0 +1,15 @@
+1. for every project, the website should also tell, what I think about the project
+2. remove json button
+3. can I add a image to every property?
+4. work as a market place for new property buyers who bought during pre launch or new launch
+   and would like to sell without occupying
+5. when a filter is selected, the count of remaining filters should decrease in count
+6. use the logo of the builders on the dots shown on the map
+7. when a property is selected, it should blink on the map
+
+
+
+How to get visitors to website?
+
+1. post property related videos on youtube and instagram and mention about this website in those videos
+2. 

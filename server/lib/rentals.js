@@ -62,26 +62,36 @@ class RentalStore {
     });
   }
 
-  facets() {
-    const tally = (key) => {
+  facets(filters = {}) {
+    const subsetFor = (ownKey) => {
+      const f = { ...filters };
+      delete f[ownKey];
+      return this.query(f);
+    };
+
+    const tally = (key, ownKey) => {
       const counts = new Map();
-      for (const r of this.rentals) counts.set(r[key], (counts.get(r[key]) || 0) + 1);
-      return [...counts.entries()]
-        .map(([value, count]) => ({ value, count }))
+      for (const r of subsetFor(ownKey)) counts.set(r[key], (counts.get(r[key]) || 0) + 1);
+      const all = new Set();
+      for (const r of this.rentals) all.add(r[key]);
+      return [...all]
+        .map((value) => ({ value, count: counts.get(value) || 0 }))
         .sort((a, b) => b.count - a.count || String(a.value).localeCompare(String(b.value)));
     };
 
+    const bhkSubset = subsetFor('bhk');
     const rents = this.rentals.map((r) => r.rentPerMonth);
     return {
       bhk: [...new Set(this.rentals.map((r) => r.bhk))]
         .sort((a, b) => a - b)
-        .map((value) => ({ value, count: this.rentals.filter((r) => r.bhk === value).length })),
-      zones: tally('zone'),
-      propertyTypes: tally('propertyType'),
-      furnishing: tally('furnishing'),
+        .map((value) => ({ value, count: bhkSubset.filter((r) => r.bhk === value).length })),
+      zones: tally('zone', 'zones'),
+      propertyTypes: tally('propertyType', 'types'),
+      furnishing: tally('furnishing', 'furnishing'),
       rent: { min: Math.min(...rents), max: Math.max(...rents) },
-      petsAllowed: this.rentals.filter((r) => r.petsAllowed).length,
+      petsAllowed: subsetFor('pets').filter((r) => r.petsAllowed).length,
       total: this.rentals.length,
+      matching: this.query(filters).length,
       meta: this.meta,
     };
   }
