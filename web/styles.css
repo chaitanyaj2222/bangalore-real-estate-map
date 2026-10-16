@@ -44,9 +44,10 @@ h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: -.01em; }
 .brand { display: flex; align-items: center; gap: 11px; flex: none; }
 
 .brand-mark {
+  /* Same 🏙️ emoji as the favicon in index.html. */
   width: 30px; height: 30px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #2f8f79 0%, #2563eb 55%, #d97706 100%);
+  display: grid; place-items: center;
+  font-size: 28px; line-height: 1;
   flex: none;
 }
 
@@ -235,7 +236,35 @@ h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: -.01em; }
   box-shadow: 0 1px 4px rgba(0,0,0,.4);
   transition: transform .12s ease;
 }
-.pin.is-active { transform: scale(1.45); }
+.pin.is-active {
+  position: relative;
+  transform: scale(1.45);
+  animation: pin-blink 1s ease-in-out infinite;
+}
+/* Expanding ring in the builder's colour so the selected pin stands out. */
+.pin.is-active::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 2px solid var(--pc, #333);
+  animation: pin-ring 1.4s ease-out infinite;
+  pointer-events: none;
+}
+/* Keep the selected pin above its neighbours. */
+.leaflet-marker-icon:has(.pin.is-active) { z-index: 10000 !important; }
+
+@keyframes pin-blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: .35; }
+}
+@keyframes pin-ring {
+  0%   { transform: scale(1);   opacity: .9; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pin.is-active, .pin.is-active::after { animation: none; }
+}
 
 .leaflet-container { font: inherit; }
 .leaflet-popup-content-wrapper { border-radius: 8px; box-shadow: var(--shadow); }
@@ -438,14 +467,6 @@ h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: -.01em; }
   flex: none;
 }
 .line-key.dashed { border-top-style: dashed; }
-
-.pill-key {
-  font-size: 10px; font-weight: 700;
-  padding: 2px 6px;
-  background: var(--surface);
-  border: 1px solid var(--border-strong);
-  border-radius: 999px;
-}
 
 .legend-toggles {
   display: flex; flex-direction: column; gap: 4px;

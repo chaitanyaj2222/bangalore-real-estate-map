@@ -149,10 +149,6 @@ function renderLegend() {
     wrap.append(el('div', { class: 'legend-title', text: 'Pins' }));
     wrap.append(el('div', { class: 'row muted', text: 'Colour = builder (see filters)' }));
     wrap.append(el('div', { class: 'row muted', text: 'Pin size ≈ unit count' }));
-  } else {
-    wrap.append(el('div', { class: 'legend-title', text: 'Rentals' }));
-    wrap.append(el('div', { class: 'row' }, el('span', { class: 'pill-key' }, '₹45K'), 'Monthly rent'));
-    wrap.append(el('div', { class: 'row muted', text: 'Sample listings, not real inventory' }));
   }
 
   wrap.append(el('div', { class: 'legend-title', text: 'Roads' }));

@@ -3,12 +3,17 @@
 4. work as a market place for new property buyers who bought during pre launch or new launch
    and would like to sell without occupying
 6. use the logo of the builders on the dots shown on the map
-7. when a property is selected, it should blink on the map
 8. buy bangalorerealestatemap & indianrealestatemap websites on namecheap - they cost 1100 rupees
 9. in the website, assure that all listed properties for buy or rent are vetted and are from direct sellers
     - allow no postings from brokers on the website - 100% borker free
-10. build a strategy to attract rental postings
-12. make this mobile friendly for both mobile phones and tablets
+10. build a strategy to attract real  rental postings - should I just organically reach out to people on x and reddit?
+12. make this mobile friendly for both mobile phones and tablets - that people can add properties from thier phones
+13. even for rental properties, we should give a rating based on certain factors
+14. few dots are larger than others
+15. post on reddit to attract users 
+16. create a x page and talk to users on X to make this more better
+17. what is the monetization strategy? - can I make this like propsoch?
+18. 
 
 
 
@@ -18,6 +23,8 @@ done
 5. when a filter is selected, the count of remaining filters should decrease in count
 2. remove json button
 11. show the builders list only in the faucets and remove it from the top of the map
+7. when a property is selected, it should blink on the map
+
 
 
 

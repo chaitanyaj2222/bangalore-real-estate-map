@@ -6,7 +6,8 @@ const BLR = { center: [12.99, 77.6], zoom: 11 };
 
 // zoomSnap below 1 lets fitBounds land on a fractional zoom. At the default of 1
 // it rounds down to the next whole level, which can frame the data ~2x too wide.
-export const map = L.map('map', { zoomControl: false, zoomSnap: 0.25, zoomDelta: 0.5 })
+// No attribution control: neither the "Leaflet" prefix nor the OSM credit is shown.
+export const map = L.map('map', { zoomControl: false, attributionControl: false, zoomSnap: 0.25, zoomDelta: 0.5 })
   .setView(BLR.center, BLR.zoom);
 
 // Keyless raster tiles. CARTO / Stadia / Mapbox all want an API key now; if you

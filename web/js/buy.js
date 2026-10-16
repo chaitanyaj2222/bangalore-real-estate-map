@@ -54,7 +54,7 @@ function buildMarkers() {
       riseOnHover: true,
       icon: L.divIcon({
         className: '',
-        html: `<div class="pin" data-id="${p.id}" style="width:${d}px;height:${d}px;background:${p.builderColor}"></div>`,
+        html: `<div class="pin" data-id="${p.id}" style="width:${d}px;height:${d}px;background:${p.builderColor};--pc:${p.builderColor}"></div>`,
         iconSize: [d, d],
         iconAnchor: [d / 2, d / 2],
       }),
@@ -192,7 +192,7 @@ function renderDetail(p, body) {
     el('p', { class: 'sub', text: `${p.locality} · ${p.corridor} · ${p.zone} Bengaluru` }),
     p.distanceKm != null
       ? el('p', { class: 'dist-line', text: `${formatKm(p.distanceKm)} from your location, straight line` })
-      : null,
+      : '',
     el('dl', { class: 'kv' },
       kv('Price band', saleBand(p)),
       kv('Sizes', sizeBand(p)),

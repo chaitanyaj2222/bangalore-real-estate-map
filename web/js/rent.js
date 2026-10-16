@@ -261,7 +261,7 @@ function renderDetail(r, body) {
       el('span', { class: 'rating inline' }, ' ★ ', String(r.rating), el('span', { class: 'muted', text: ` (${r.reviews})` }))),
     r.distanceKm != null
       ? el('p', { class: 'dist-line', text: `${formatKm(r.distanceKm)} from your location, straight line` })
-      : null,
+      : '',
     el('p', { class: 'rent-big' }, el('b', { text: rupees(r.rentPerMonth) }), ' / month'),
     el('dl', { class: 'kv' },
       kv('Deposit', `${rupees(r.deposit)} (${r.depositMonths} mo)`),
