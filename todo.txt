@@ -9,10 +9,13 @@
 10. build a strategy to attract real  rental postings - should I just organically reach out to people on x and reddit?
 12. make this mobile friendly for both mobile phones and tablets - that people can add properties from thier phones
 13. even for rental properties, we should give a rating based on certain factors
-14. few dots are larger than others
 15. post on reddit to attract users 
-16. create a x page and talk to users on X to make this more better
-17. what is the monetization strategy? - can I make this like propsoch?
+16. create a x page and talk to users on X to make this more better - build this with customers
+17. what is the monetization strategy? - can I make this like propsoch? - I need to find out how they help the customers
+      - the point of making this website is to help buyers buy with more clarity. If the
+         buyers are NRI's, I can handle the property management part also. So, I need to do
+         the propsoch part better -> I should mould myself to play their part -> they are
+         brokers but with a detailed report about the property
 18. 
 
 
@@ -24,6 +27,8 @@ done
 2. remove json button
 11. show the builders list only in the faucets and remove it from the top of the map
 7. when a property is selected, it should blink on the map
+14. few dots are larger than others - wont do
+
 
 
 
